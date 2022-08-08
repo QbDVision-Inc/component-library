@@ -29,6 +29,16 @@
     "project": "./tsconfig.json"
   },
   "rules": {
+    "import/no-extraneous-dependencies": [
+      "error",
+      {
+        "devDependencies": [
+          "**/*.stories.*",
+          "**/.storybook/**/*.*"
+        ],
+        "peerDependencies": true
+      }
+    ],
     "react/react-in-jsx-scope": "off",
     "import/no-unresolved": 0,
     "react/jsx-filename-extension": [1, {
