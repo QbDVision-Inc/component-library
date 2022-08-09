@@ -1,13 +1,14 @@
 import React, { FC, ReactNode } from "react";
+import { Space } from "antd";
+
 import "antd/lib/button/style/index.less";
-import styles from "./buttonGroup.module.css";
 
 type PropsType = {
   children?: ReactNode;
 };
 
 const ButtonGroup: FC<PropsType> = ({ children }) => (
-  <div className={styles.buttonGroup}>{children}</div>
+  <Space size={10}>{children}</Space>
 );
 
 export default ButtonGroup;

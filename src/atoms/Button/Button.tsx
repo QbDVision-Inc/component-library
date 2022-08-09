@@ -2,9 +2,15 @@ import React, { FC } from "react";
 import { Button as AntButton } from "antd";
 
 import "antd/lib/button/style/index.less";
+import {
+  generateVerticalPadding,
+  remapSizeValues,
+  remapTypeValues,
+} from "./utils";
 
-type Type = "primary" | "secondary" | "ghost";
-type Size = "large" | "small";
+export type Type = "primary" | "secondary" | "ghost";
+
+export type Size = "large" | "small";
 
 type PropsType = {
   id?: string;
@@ -13,35 +19,8 @@ type PropsType = {
   type?: Type;
   size?: Size;
   disabled?: boolean;
+  loading?: boolean;
   onClick?: () => void;
-};
-
-const remapTypeValues = (value?: Type) => {
-  // remap 'secondary' & 'ghost' values to 'default' & 'text'
-  if (value === "secondary") return "default";
-  if (value === "ghost") return "text";
-
-  return value;
-};
-
-const remapSizeValues = (value?: Size) => {
-  // remap 'middle' value to 'large'
-  if (value !== "small") return "large";
-
-  return value;
-};
-
-const generateVerticalPadding = (value: Size) => {
-  let p = "8px";
-
-  if (value === "small") {
-    p = "5px";
-  }
-
-  return {
-    paddingTop: p,
-    paddingBottom: p,
-  };
 };
 
 const Button: FC<PropsType> = (props) => {
