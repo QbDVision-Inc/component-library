@@ -31,12 +31,29 @@ const remapSizeValues = (value?: Size) => {
   return value;
 };
 
+const generateVerticalPadding = (value: Size) => {
+  let p = "8px";
+
+  if (value === "small") {
+    p = "5px";
+  }
+
+  return {
+    paddingTop: p,
+    paddingBottom: p,
+  };
+};
+
 const Button: FC<PropsType> = (props) => {
   const { label = "Button", type = "primary", size = "large" } = props;
 
   return (
     <AntButton
       {...props}
+      style={{
+        height: "auto",
+        ...generateVerticalPadding(size),
+      }}
       size={remapSizeValues(size)}
       type={remapTypeValues(type)}
     >
