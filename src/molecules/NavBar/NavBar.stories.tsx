@@ -14,7 +14,7 @@ export default {
   },
 } as ComponentMeta<typeof NavBar>;
 
-const Template: ComponentStory<typeof NavBar> = (args) => <NavBar {...args} />;
+const Template: ComponentStory<typeof NavBar> = () => <NavBar />;
 
 export const Primary = Template.bind({});
 /* export const Primary = Template.bind({});

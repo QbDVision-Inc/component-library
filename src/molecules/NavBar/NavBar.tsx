@@ -6,7 +6,7 @@ type PropTypes = {
   // breadcrumb: {};
 };
 
-const NavBar: FC<PropTypes> = (props) => (
+const NavBar: FC<PropTypes> = () => (
   <header className={style.NavBar}>
     <div className={style.leftContent}>
       <Logo />
@@ -17,5 +17,4 @@ const NavBar: FC<PropTypes> = (props) => (
     <div className={style.rightContent}>Rockets R US</div>
   </header>
 );
-
 export default NavBar;

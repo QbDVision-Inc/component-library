@@ -24,10 +24,6 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "eject": "react-scripts eject",
-    "start": "craco start",
-    "build": "craco build",
-    "test": "craco test",
     "storybook": "start-storybook -p 6006 -s public",
     "build-storybook": "build-storybook -s public"
   },
