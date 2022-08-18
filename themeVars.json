@@ -1,0 +1,9 @@
+{
+  "blue-base": "#1f46a1",
+  "btn-default-color": "@blue-base",
+  "btn-default-border": "@blue-base",
+  "btn-height-base": "38px",
+  "border-radius-base": "5px",
+  "btn-padding-horizontal-lg": "@padding-md",
+  "btn-padding-horizontal-sm": "@padding-md"
+}

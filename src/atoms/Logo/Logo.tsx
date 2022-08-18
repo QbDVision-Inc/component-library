@@ -1,5 +1,5 @@
 import React, { FC } from "react";
-import logo from "./logo-light.svg";
+import logo from "../../assets/logo.svg";
 import darkLogo from "./logo-dark.svg";
 
 type Size = "small" | "medium";

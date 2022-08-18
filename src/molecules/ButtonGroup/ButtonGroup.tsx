@@ -1,7 +1,7 @@
 import React, { FC, ReactNode } from "react";
 import { Space } from "antd";
 
-import "antd/lib/button/style/index.less";
+import "antd/lib/space/style/index.less";
 
 type PropsType = {
   children?: ReactNode;

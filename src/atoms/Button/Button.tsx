@@ -1,12 +1,12 @@
 import React, { FC } from "react";
 import { Button as AntButton } from "antd";
-
-import "antd/lib/button/style/index.less";
 import {
   generateVerticalPadding,
   remapSizeValues,
   remapTypeValues,
 } from "./utils";
+
+import "antd/lib/button/style/index.less";
 
 export type Type = "primary" | "secondary" | "ghost";
 

@@ -55,7 +55,6 @@
     "no-unused-expressions": "off",
     "@typescript-eslint/no-shadow": ["error"],
     "import/prefer-default-export": 0,
-    "no-unused-vars": 0, //it caused problems with args of typescript
     "react/function-component-definition": 0,
     "react/require-default-props": 0,
     "react/jsx-props-no-spreading": 0,

@@ -1,12 +1,13 @@
-import React from "react";
 import Button from "./atoms/Button/Button";
-
-import "./App.less";
+import ButtonGroup from "./molecules/ButtonGroup/ButtonGroup";
 
 function App() {
   return (
-    <div className="App">
-      <Button label="assert" type="primary" />
+    <div style={{ textAlign: "center" }}>
+      <ButtonGroup>
+        <Button label="Button 1" />
+        <Button label="Button 2" />
+      </ButtonGroup>
     </div>
   );
 }
