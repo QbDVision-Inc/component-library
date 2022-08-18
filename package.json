@@ -3,9 +3,7 @@
   "version": "0.0.1",
   "private": true,
   "dependencies": {
-    "@craco/craco": "^6.4.5",
-    "@storybook/react": "^6.5.9",
-    "@storybook/testing-library": "^0.0.13",
+    "@craco/craco": "7.0.0-alpha.7",
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.3.0",
     "@testing-library/user-event": "^13.5.0",
@@ -15,15 +13,17 @@
     "@types/react-dom": "^18.0.6",
     "antd": "^4.22.3",
     "babel-plugin-import": "^1.13.5",
-    "craco-less": "^2.0.0",
+    "craco-less": "2.1.0-alpha.0",
     "eslint-plugin-prettier": "^4.2.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-scripts": "5.0.1",
     "typescript": "^4.7.4",
-    "web-vitals": "^2.1.4"
+    "webpack": "^5.74.0"
   },
   "scripts": {
+    "start": "craco start",
+    "build": "craco build",
     "storybook": "start-storybook -p 6006 -s public",
     "build-storybook": "build-storybook -s public"
   },
@@ -57,6 +57,8 @@
     ]
   },
   "devDependencies": {
+    "@storybook/react": "^6.5.9",
+    "@storybook/testing-library": "^0.0.13",
     "@storybook/addon-actions": "^6.5.9",
     "@storybook/addon-essentials": "^6.5.9",
     "@storybook/addon-interactions": "^6.5.9",
@@ -75,7 +77,9 @@
     "eslint-plugin-react-hooks": "^4.6.0",
     "prettier": "^2.7.1",
     "prop-types": "^15.8.1",
-    "storybook-dark-mode": "^1.1.0",
-    "webpack": "^5.74.0"
+    "storybook-dark-mode": "^1.1.0"
+  },
+  "overrides": {
+    "react-refresh": "0.11.0"
   }
 }
