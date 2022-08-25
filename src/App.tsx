@@ -1,5 +1,5 @@
-import Button from "./atoms/Button/Button";
-import ButtonGroup from "./molecules/ButtonGroup/ButtonGroup";
+import Button from "./components/atoms/Button/Button";
+import ButtonGroup from "./components/molecules/ButtonGroup/ButtonGroup";
 
 function App() {
   return (

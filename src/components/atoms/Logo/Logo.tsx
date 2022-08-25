@@ -1,5 +1,5 @@
 import React, { FC } from "react";
-import logo from "../../assets/logo.svg";
+import logo from "../../../assets/logo.svg";
 import darkLogo from "./logo-dark.svg";
 
 type Size = "small" | "medium";
@@ -21,11 +21,14 @@ const generateSize = (value: Size) => {
 };
 
 const Logo: FC<PropTypes> = ({ size = "medium", type = "light" }) => (
-  <img
-    height={generateSize(size)}
-    src={type === "dark" ? darkLogo : logo}
-    alt="QbDVision Logo"
-  />
+  <>
+    52
+    <img
+      height={generateSize(size)}
+      src={type === "dark" ? darkLogo : logo}
+      alt="QbDVision Logo"
+    />
+  </>
 );
 
 export default Logo;

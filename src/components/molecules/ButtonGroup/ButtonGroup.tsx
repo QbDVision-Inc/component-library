@@ -3,11 +3,11 @@ import { Space } from "antd";
 
 import "antd/lib/space/style/index.less";
 
-type PropsType = {
+export type ButtonGroupProps = {
   children?: ReactNode;
 };
 
-const ButtonGroup: FC<PropsType> = ({ children }) => (
+const ButtonGroup: FC<ButtonGroupProps> = ({ children }) => (
   <Space size={10}>{children}</Space>
 );
 

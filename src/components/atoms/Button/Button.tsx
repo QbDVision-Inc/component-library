@@ -12,7 +12,7 @@ export type Type = "primary" | "secondary" | "ghost";
 
 export type Size = "large" | "small";
 
-type PropsType = {
+type ButtonProps = {
   id?: string;
   label?: string;
   title?: string;
@@ -23,7 +23,7 @@ type PropsType = {
   onClick?: () => void;
 };
 
-const Button: FC<PropsType> = (props) => {
+const Button: FC<ButtonProps> = (props) => {
   const { label = "Button", type = "primary", size = "large" } = props;
 
   return (
