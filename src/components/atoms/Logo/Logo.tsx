@@ -21,14 +21,11 @@ const generateSize = (value: Size) => {
 };
 
 const Logo: FC<PropTypes> = ({ size = "medium", type = "light" }) => (
-  <>
-    52
-    <img
-      height={generateSize(size)}
-      src={type === "dark" ? darkLogo : logo}
-      alt="QbDVision Logo"
-    />
-  </>
+  <img
+    height={generateSize(size)}
+    src={type === "dark" ? darkLogo : logo}
+    alt="QbDVision Logo"
+  />
 );
 
 export default Logo;
