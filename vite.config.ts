@@ -28,12 +28,4 @@ export default defineConfig({
     //   insertTypesEntry: true,
     // }),
   ],
-  css: {
-    preprocessorOptions: {
-      less: {
-        modifyVars: { ...require("./themeVars.json") },
-        javascriptEnabled: true,
-      },
-    },
-  },
 });

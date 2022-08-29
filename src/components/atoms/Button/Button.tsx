@@ -1,12 +1,8 @@
 import React, { FC } from "react";
-import { Button as AntButton } from "antd";
-import {
-  generateVerticalPadding,
-  remapSizeValues,
-  remapTypeValues,
-} from "./utils";
+import c from "classnames";
+import Spinner from "../Spinner";
 
-import "antd/lib/button/style/index.less";
+import style from "./Button.module.pcss";
 
 export type Type = "primary" | "secondary" | "ghost";
 
@@ -23,22 +19,38 @@ type ButtonProps = {
   onClick?: () => void;
 };
 
-const Button: FC<ButtonProps> = (props) => {
-  const { label = "Button", type = "primary", size = "large" } = props;
-
-  return (
-    <AntButton
-      {...props}
-      style={{
-        height: "auto",
-        ...generateVerticalPadding(size),
-      }}
-      size={remapSizeValues(size)}
-      type={remapTypeValues(type)}
+const Button: FC<ButtonProps> = ({
+  id,
+  label = "Button",
+  type = "primary",
+  size = "large",
+  title,
+  disabled,
+  loading,
+  onClick,
+}) => (
+  <div className={c(style.wrapper, { [style["wrapper-disabled"]]: disabled })}>
+    <button
+      id={id}
+      className={c(
+        style.button,
+        style[`button-${type}`],
+        style[`button-${size}`],
+        { [style["button-disabled"]]: disabled },
+        { [style["button-loading"]]: loading }
+      )}
+      type="button"
+      onClick={onClick}
+      disabled={disabled}
+      title={title}
     >
-      {label}
-    </AntButton>
-  );
-};
-
+      <span>{label}</span>
+      {loading && (
+        <div className={style["button-spinner"]}>
+          <Spinner />
+        </div>
+      )}
+    </button>
+  </div>
+);
 export default Button;

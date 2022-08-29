@@ -1,0 +1,76 @@
+:root {
+  --color-blue: #1F46A1;
+  --animation-time: .3s;
+}
+
+.wrapper {
+  display: inline-block;
+
+  &-disabled {
+    cursor: not-allowed;
+  }
+}
+
+.button {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid transparent;
+  height: 36px;
+  font-size: 14px;
+  border-radius: 4px;
+  color: #FFFFFF;
+  background: transparent;
+  transition: var(--animation-time);
+
+  &-primary {
+    background-color: var(--color-blue);
+  }
+
+  &-secondary {
+    border: 1px solid #1F46A1;
+    color: var(--color-blue);
+  }
+
+  &-ghost {
+    color: var(--color-blue);
+  }
+
+  &-primary:hover, &-secondary:hover, &-ghost:active {
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.14), 0 1px 10px rgba(0, 0, 0, 0.12), 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+
+  &-ghost:hover {
+    border: 1px solid #1F46A1;
+  }
+
+  &-large {
+    height: 36px;
+    padding: 0 16px;
+  }
+
+  &-small {
+    height: 30px;
+    padding: 0 16px;
+  }
+
+  &-disabled {
+    filter: grayscale(1);
+    opacity: .5;
+    pointer-events: none;
+  }
+
+  &-spinner {
+    position: absolute;
+    display: flex;
+  }
+
+  &-loading {
+    pointer-events: none;
+
+    & span {
+      opacity: 0;
+    }
+  }
+}

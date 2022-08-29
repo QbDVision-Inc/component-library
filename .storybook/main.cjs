@@ -16,18 +16,5 @@ module.exports = {
   },
   "features": {
     "storyStoreV7": true
-  },
-  async viteFinal(config, {configType}) {
-    // customize the Vite config here
-    config.css = {
-      preprocessorOptions: {
-        less: {
-          modifyVars: require('../themeVars.json'),
-          javascriptEnabled: true,
-        },
-      },
-    };
-
-    return config;
-  },
+  }
 }
