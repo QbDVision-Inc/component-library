@@ -16,6 +16,7 @@ type ButtonProps = {
   size?: Size;
   disabled?: boolean;
   loading?: boolean;
+  isSubmit?: boolean;
   onClick?: () => void;
 };
 
@@ -27,6 +28,7 @@ const Button: FC<ButtonProps> = ({
   title,
   disabled,
   loading,
+  isSubmit,
   onClick,
 }) => (
   <div className={c(style.wrapper, { [style["wrapper-disabled"]]: disabled })}>
@@ -39,7 +41,7 @@ const Button: FC<ButtonProps> = ({
         { [style["button-disabled"]]: disabled },
         { [style["button-loading"]]: loading }
       )}
-      type="button"
+      type={isSubmit ? "submit" : "button"}
       onClick={onClick}
       disabled={disabled}
       title={title}
