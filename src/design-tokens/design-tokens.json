@@ -9,7 +9,9 @@
       },
       "black": {
         "black": "#000000",
-        "black-70": "#000000B2",
+        "black-70": "#000000B2"
+      },
+      "gray": {
         "dark-gray": "#434952",
         "medium-gray": "#859099",
         "mild-gray": "#C0C6CC",
@@ -57,7 +59,7 @@
       },
       "blue": {
         "pastel-blue": "#5AC0F1",
-        "pastel-blue-light-10": "#5AC0F11A",
+        "pastel-blue-light": "#5AC0F11A",
         "pastel-pale-blue": "#ABC8DA",
         "pastel-pale-blue-medium": "#CAE3F3",
         "pastel-pale-blue-mild": "#D6E9FD",
@@ -66,7 +68,7 @@
       },
       "lavender": {
         "lavender": "#B78EFF",
-        "pastel-lavender-light-10": "#B78EFF19"
+        "pastel-lavender-light": "#B78EFF19"
       }
     }
   }
