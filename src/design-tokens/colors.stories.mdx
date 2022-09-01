@@ -1,0 +1,25 @@
+import { Meta, Heading, ColorPalette, ColorItem } from '@storybook/addon-docs';
+import tokens from './design-tokens.json';
+
+<Meta title="Design System/Colors" />
+
+<>
+  {
+    Object.entries(tokens.colors).map((token, i) => {
+      return <div key={i} style={{ textTransform: "capitalize" }}>
+        <Heading>{token[0]}</Heading>
+        <ColorPalette>
+          {
+            Object.entries(token[1]).map((nestedToken, j) => {
+              return <ColorItem key={j}
+                                title={nestedToken[0]}
+                                subtitle=""
+                                colors={Object.values(nestedToken[1])}
+              />
+            })
+          }
+        </ColorPalette>
+      </div>
+    })
+  }
+</>

@@ -1,0 +1,73 @@
+{
+  "colors": {
+    "BASIC": {
+      "blue": {
+        "deep-blue": "#1F1F81",
+        "primary-blue": "#1F46A1",
+        "light-blue": "#E8F8FF",
+        "accent-blue": "#1FBCFF"
+      },
+      "black": {
+        "black": "#000000",
+        "black-70": "#000000B2",
+        "dark-gray": "#434952",
+        "medium-gray": "#859099",
+        "mild-gray": "#C0C6CC",
+        "slight-gray": "#DBE1E4",
+        "shimmer-gray": "#E6EDF0",
+        "light-gray": "#F0F3F5",
+        "white": "#FFFFFF"
+      }
+    },
+    "SEMANTICS": {
+      "green": {
+        "success-green": "#2DC9A4",
+        "success-green-light": "#EBF9F7"
+      },
+      "yellow": {
+        "warning-yellow": "#FFC107",
+        "warning-yellow-light": "#FFF9E6"
+      },
+      "red": {
+        "error-red": "#DD3546",
+        "error-red-light": "#FBEAEC"
+      }
+    },
+    "RAMPS": {
+      "red": {
+        "deep-maroon": "#2E0402",
+        "cherry-red": "#993300"
+      },
+      "orange": {
+        "orange": "#FF9900",
+        "pastel-orange": "#FFC49F"
+      },
+      "yellow": {
+        "yellow": "#F8EA0E",
+        "pastel-yellow": "#FFF37E",
+        "pastel-yellow-mild": "#FCF7CD",
+        "pastel-yellow-light": "#FEFBE7"
+      },
+      "green": {
+        "deep-green": "#006551",
+        "olive-green": "#ADB311",
+        "green": "#26AD92",
+        "aqua": "#5DCAC7",
+        "emerald-green": "#008000"
+      },
+      "blue": {
+        "pastel-blue": "#5AC0F1",
+        "pastel-blue-light-10": "#5AC0F11A",
+        "pastel-pale-blue": "#ABC8DA",
+        "pastel-pale-blue-medium": "#CAE3F3",
+        "pastel-pale-blue-mild": "#D6E9FD",
+        "pastel-pale-blue-light": "#E6F5FE",
+        "pastel-pale-blue-light-2": "#F2FBFC"
+      },
+      "lavender": {
+        "lavender": "#B78EFF",
+        "pastel-lavender-light-10": "#B78EFF19"
+      }
+    }
+  }
+}
