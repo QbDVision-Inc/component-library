@@ -2,8 +2,8 @@
 
 ---
 
-This is the component library of QbDVisions. You can run `dev` server while creating new component, or you can run
-a `storybook dev` server to work on the docs and add/update stories or docs
+This is the component library of QbDVisions. You can run `dev server` while creating new components, or you can run
+a `storybook dev server` to work on the docs and add/update stories or docs
 
 ## Available Scripts
 
