@@ -4,6 +4,6 @@ export default create({
   base: "light",
   brandTitle: "QbDVision",
   brandUrl: "https://qbdvision.com/",
-  brandImage: "../public/logo.svg",
+  brandImage: "logo.svg",
   brandTarget: "_self",
 });
