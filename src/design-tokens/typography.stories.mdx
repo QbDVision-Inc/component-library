@@ -1,0 +1,25 @@
+import { Meta, Typeset } from '@storybook/addon-docs';
+import { typography } from './design-tokens.json';
+import './fonts.css';
+
+<Meta title="Typography/Base" />
+
+# Base Typography
+
+<div style={{ margin: "20px 0 10px" }}>
+  <span style={{ fontFamily: "openSans", fontWeight: 600 }}>Open-Sans: </span>
+  <span style={{ fontFamily: "openSans" }}>400(regular), </span>
+  <span style={{ fontFamily: "openSans", fontWeight: 600 }}>600(semi-bold), </span>
+  <span style={{ fontFamily: "openSans", fontWeight: 700 }}>700(bold)</span>
+</div>
+<div style={{ marginBottom: "10px" }}>
+  <span style={{ fontFamily: "TNR", fontWeight: 600 }}>Times New Roman: </span>
+  <span style={{ fontFamily: "TNR" }}>400(regular), </span>
+  <span style={{ fontFamily: "TNR", fontWeight: 700 }}>700(bold)</span>
+</div>
+<div>
+  <span style={{ fontFamily: "Roboto", fontWeight: 600 }}>Roboto: </span>
+  <span style={{ fontFamily: "Roboto" }}>700(bold)</span>
+</div>
+
+<Typeset fontSizes={typography["font-size"]} fontFamily={"openSans"} sampleText="Lorem ipsum dolor sit amet" />

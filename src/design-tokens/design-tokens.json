@@ -71,5 +71,29 @@
         "pastel-lavender-light": "#B78EFF19"
       }
     }
+  },
+  "typography": {
+    "font-size": [
+      12,
+      14,
+      16,
+      18,
+      24,
+      36
+    ],
+    "font-weight": [
+      "regular",
+      "semi-bold",
+      "bold"
+    ],
+    "line-height": [
+      "auto",
+      20
+    ],
+    "typeface": [
+      "openSans",
+      "TNR",
+      "Roboto"
+    ]
   }
 }
