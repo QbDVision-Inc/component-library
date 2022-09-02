@@ -21,7 +21,7 @@ TwoButtons.args = {
   children: (
     <>
       <Button label="Button" type="secondary" disabled />
-      <Button label="Button" type="secondary" />
+      <Button label="Button" type="primary" />
     </>
   ),
 };
