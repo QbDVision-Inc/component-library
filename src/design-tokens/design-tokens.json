@@ -95,5 +95,10 @@
       "TNR",
       "Roboto"
     ]
+  },
+  "spacingPoint": 4,
+  "radius": {
+    "4": "4px",
+    "8": "8px"
   }
 }

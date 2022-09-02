@@ -1,0 +1,30 @@
+import { Meta, Typeset } from '@storybook/addon-docs';
+import { radius } from './design-tokens.json';
+import './fonts.css';
+
+
+<Meta title="Design System/Radius" />
+
+# Radii
+
+export let wrapper = {
+  display: "flex",
+  gap: "30px",
+  marginTop: "30px"
+};
+
+export let card = {
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+  border: "1px solid #C0C8CC",
+  width: "150px",
+  height: "150px",
+  marginTop: "20px",
+};
+
+<div style={wrapper}>
+  {Object.entries(radius).map(item => <div style={{ ...card, borderRadius: Number(item[0]) }}>
+    {item[1]}
+  </div>)}
+</div>
