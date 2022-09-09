@@ -1,4 +1,4 @@
-@design-tokens url('./design-tokens.json') format('style-dictionary3');
+@design-tokens url('../../../design-tokens/design-tokens.json') format('style-dictionary3');
 
 :root {
   --qbd-color-blue: #1F46A1;
@@ -23,12 +23,11 @@
   }
 }
 
-.link:link, .link:visited {
-
+.link {
   &:link, &:visited {
     position: relative;
     font-size: 14px;
-    color: design-token('colors.BASIC.blue.primary-blue');
+    color: design-token('colors.basic.blue.primary-blue');
     background: transparent;
     transition: var(--qbd-animation-time);
     font-weight: design-token('typography.font-weight.semi-bold');
@@ -49,12 +48,12 @@
       display: inline-block;
       width: 100%;
       height: 1px;
-      background: design-token('colors.BASIC.blue.primary-blue');
+      background: design-token('colors.basic.blue.primary-blue');
       text-decoration: underline;
     }
   }
 }
 
-.label {
-  margin-right: 10px;
+svg {
+  margin-left: 10px;
 }

@@ -2,6 +2,10 @@ import { Meta, Typeset } from '@storybook/addon-docs';
 import { typography } from './design-tokens.json';
 import './fonts.css';
 
+export const generateFontSizesArray = (obj) => {
+  return Object.keys(obj).map(item => Number(item));
+}
+
 <Meta title="Design System/Typography" />
 
 # Base Typography
@@ -16,7 +20,7 @@ import './fonts.css';
   </div>
 </div>
 
-<Typeset fontSizes={typography["font-size"]} fontFamily={"openSans"} sampleText="Lorem ipsum dolor sit amet" />
+<Typeset fontSizes={generateFontSizesArray(typography["font-size"])} fontFamily={"openSans"} sampleText="Lorem ipsum dolor sit amet" />
 
 <div style={{ marginBottom: "10px" }}>
   <span style={{ fontFamily: "TNR", fontWeight: 600 }}>Font: Times New Roman </span>
@@ -27,7 +31,7 @@ import './fonts.css';
   </div>
 </div>
 
-<Typeset fontSizes={typography["font-size"]} fontFamily={"TNR"} sampleText="Lorem ipsum dolor sit amet" />
+<Typeset fontSizes={generateFontSizesArray(typography["font-size"])} fontFamily={"TNR"} sampleText="Lorem ipsum dolor sit amet" />
 
 <div>
   <span style={{ fontFamily: "Roboto", fontWeight: 600 }}>Font: Roboto</span>
@@ -37,4 +41,4 @@ import './fonts.css';
   </div>
 </div>
 
-<Typeset fontSizes={typography["font-size"]} fontFamily={"Roboto"} sampleText="Lorem ipsum dolor sit amet" />
+<Typeset fontSizes={generateFontSizesArray(typography["font-size"])} fontFamily={"Roboto"} sampleText="Lorem ipsum dolor sit amet" />

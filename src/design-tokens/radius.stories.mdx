@@ -25,7 +25,7 @@ export let card = {
 };
 
 <div style={wrapper}>
-  {Object.entries(radius).map(item => <div style={{ ...card, borderRadius: Number(item[0]) }}>
-    {item[1]}
+  {Object.entries(radius).map(item => <div key={item[0]} style={{ ...card, borderRadius: Number(item[0]) }}>
+    {item[1].value}
   </div>)}
 </div>

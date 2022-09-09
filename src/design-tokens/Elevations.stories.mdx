@@ -12,8 +12,9 @@ import './fonts.css'; import { card, wrapper } from "./radius.stories.mdx";
     ...card,
     border: 0,
     borderRadius: "4px",
-    boxShadow: item[1]
+    boxShadow: item[1].value
   }}
+                                                 key={item[0]}
   >
     {item[0]}
   </div>)}

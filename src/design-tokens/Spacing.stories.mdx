@@ -5,7 +5,7 @@ import './fonts.css'; import { wrapper } from "./radius.stories.mdx";
 
 <Meta title="Design System/Spacing" />
 
-<Title>Spacing X={spacingPoint.toString()}</Title>
+<Title>Spacing X={spacingPoint.value.toString()}</Title>
 
 export let card = {
   display: "flex",
@@ -23,9 +23,10 @@ export let card = {
 <div style={{ ...wrapper, alignItems: "start" }}>
   {Array.apply(null, Array(18)).map((item, index) => <div style={{
     ...card,
-    padding: `${(index + 1) * spacingPoint}px`
+    padding: `${(index + 1) * spacingPoint.value}px`
   }}
+                                                          key={index}
   >
-    {(index + 1) * spacingPoint}px
+    {(index + 1) * spacingPoint.value}px
   </div>)}
 </div>

@@ -6,7 +6,7 @@ import { colors } from "../../../design-tokens/design-tokens.json";
 import Logo from "./Logo";
 
 const darkStyle = {
-  backgroundColor: colors.BASIC.blue["primary-blue"],
+  backgroundColor: colors.basic.blue["primary-blue"].value,
   padding: "60px",
 };
 export default {
