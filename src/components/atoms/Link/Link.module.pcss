@@ -1,0 +1,45 @@
+@design-tokens url('./design-tokens.json') format('style-dictionary3');
+
+:root {
+  --qbd-color-blue: #1F46A1;
+  --qbd-color-white: #fff;
+  --qbd-animation-time: .3s;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  font-family: "openSans", Arial, sans-serif;
+  font-size: 14px;
+
+  &-disabled {
+    cursor: not-allowed;
+
+    & a {
+      filter: grayscale(1);
+      opacity: .3;
+      pointer-events: none;
+    }
+  }
+}
+
+.link:link, .link:visited {
+
+  &:link, &:visited {
+    position: relative;
+    font-size: 14px;
+    color: design-token('colors.BASIC.blue.primary-blue');
+    background: transparent;
+    transition: var(--qbd-animation-time);
+    font-weight: design-token('typography.font-weight.semi-bold');
+    text-decoration: none;
+  }
+
+  &:hover, &:active {
+    text-decoration: underline;
+  }
+}
+
+.label {
+  margin-right: 10px;
+}
