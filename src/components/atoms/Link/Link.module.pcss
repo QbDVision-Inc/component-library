@@ -33,10 +33,25 @@
     transition: var(--qbd-animation-time);
     font-weight: design-token('typography.font-weight.semi-bold');
     text-decoration: none;
+
+    &::after {
+      content: "";
+      transition: all design-token("transition-timing");
+    }
   }
 
   &:hover, &:active {
-    text-decoration: underline;
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      display: inline-block;
+      width: 100%;
+      height: 1px;
+      background: design-token('colors.BASIC.blue.primary-blue');
+      text-decoration: underline;
+    }
   }
 }
 

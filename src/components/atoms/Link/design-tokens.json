@@ -1,6 +1,6 @@
 {
   "colors": {
-    "BASIC": {
+    "basic": {
       "blue": {
         "deep-blue": {
           "value": "#1F1F81"
@@ -47,7 +47,7 @@
         }
       }
     },
-    "SEMANTICS": {
+    "semantics": {
       "green": {
         "success-green": {
           "value": "#2DC9A4"
@@ -73,7 +73,7 @@
         }
       }
     },
-    "RAMPS": {
+    "ramps": {
       "red": {
         "deep-maroon": {
           "value": "#2E0402"
@@ -228,5 +228,8 @@
     "elevation-6": {
       "value": "0px 24px 38px rgba(133, 144, 153, 0.14), 0px 9px 46px rgba(67, 73, 82, 0.12), 0px 11px 15px rgba(67, 73, 82, 0.2)"
     }
+  },
+  "transition-timing": {
+    "value": ".3s"
   }
 }
