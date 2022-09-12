@@ -13,14 +13,14 @@ export default {
 
 const Template: ComponentStory<typeof Link> = (args) => <Link {...args} />;
 
-export const Primary = Template.bind({});
-Primary.args = {
+export const Default = Template.bind({});
+Default.args = {
   label: "Link",
   href: "#",
 };
 
-export const Secondary = Template.bind({});
-Secondary.args = {
+export const ExternalLink = Template.bind({});
+ExternalLink.args = {
   label: "Link",
   href: "#",
   isExternal: true,
