@@ -1,8 +1,4 @@
-:root {
-  --qbd-color-blue: #1F46A1;
-  --qbd-color-white: #fff;
-  --qbd-animation-time: .3s;
-}
+@tokens url('../../../../design-tokens.json') format('style-dictionary3');
 
 .wrapper {
   display: flex;
@@ -20,32 +16,38 @@
   align-items: center;
   border: 1px solid transparent;
   height: 36px;
-  font-size: 14px;
-  border-radius: 4px;
-  color: var(--qbd-color-white);
+  font-size: token("typography.font-size.14" to px);
+  color: token("colors.basic.gray.white");
+  border-radius: token('radius.four');
+  transition: token("transition-timing");
   background: transparent;
-  transition: var(--qbd-animation-time);
 
   &-primary {
-    background-color: var(--qbd-color-blue);
+    background-color: token("colors.basic.blue.primary");
   }
 
   &-secondary {
-    border: 1px solid var(--qbd-color-blue);
-    color: var(--qbd-color-blue);
-    background-color: var(--qbd-color-white);
+    border: 1px solid token("colors.basic.blue.primary");
+    color: token("colors.basic.blue.primary");
+    background-color: var(token("colors.basic.gray.white"));
   }
 
   &-ghost {
-    color: var(--qbd-color-blue);
+    color: token("colors.basic.blue.primary");
   }
 
-  &-primary:hover, &-secondary:hover, &-ghost:active {
+  &:hover {
     box-shadow: 0 4px 5px rgba(0, 0, 0, 0.14), 0 1px 10px rgba(0, 0, 0, 0.12), 0 2px 4px rgba(0, 0, 0, 0.2);
   }
 
-  &-ghost:hover {
-    border: 1px solid #1F46A1;
+  &-ghost {
+    &:hover{
+      border: 1px solid token("colors.basic.blue.primary");
+      box-shadow: none;
+    }
+    &:active {
+      box-shadow: 0 4px 5px rgba(0, 0, 0, 0.14), 0 1px 10px rgba(0, 0, 0, 0.12), 0 2px 4px rgba(0, 0, 0, 0.2);
+    }
   }
 
   &-large {
