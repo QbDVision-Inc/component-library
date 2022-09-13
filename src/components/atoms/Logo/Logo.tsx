@@ -1,10 +1,11 @@
 import React, { FC } from "react";
-import logo from "../../../assets/logo.svg";
+
+import logo from "./logo.svg";
 import darkLogo from "./logo-dark.svg";
 
 type Size = "small" | "medium";
 
-type PropTypes = {
+type LogoTypes = {
   size?: Size;
   type?: "light" | "dark";
 };
@@ -20,7 +21,7 @@ const generateSize = (value: Size) => {
   }
 };
 
-const Logo: FC<PropTypes> = ({ size = "medium", type = "light" }) => (
+const Logo: FC<LogoTypes> = ({ size = "medium", type = "light" }) => (
   <img
     height={generateSize(size)}
     src={type === "dark" ? darkLogo : logo}

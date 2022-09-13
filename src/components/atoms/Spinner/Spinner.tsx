@@ -1,10 +1,12 @@
 import React, { FC } from "react";
+
 import style from "./Spinner.module.css";
 
 type SpinnerProps = {
   color?: "white" | "blue";
   size?: number;
 };
+
 const Spinner: FC<SpinnerProps> = ({ color, size = 24 }) => (
   <svg
     className={style.spinner}
@@ -24,4 +26,5 @@ const Spinner: FC<SpinnerProps> = ({ color, size = 24 }) => (
     </defs>
   </svg>
 );
+
 export default Spinner;
