@@ -5,23 +5,11 @@
   "scripts": {
     "dev": "vite",
     "build": "rm -rf dist && tsc && vite build",
-    "preview": "vite preview",
-    "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "preview": "vite preview"
   },
   "devDependencies": {
     "@babel/core": "^7.18.10",
     "@csstools/postcss-design-tokens": "^1.2.0",
-    "@storybook/addon-actions": "^6.5.10",
-    "@storybook/addon-docs": "^6.5.10",
-    "@storybook/addon-essentials": "^6.5.10",
-    "@storybook/addon-interactions": "^6.5.10",
-    "@storybook/addon-links": "^6.5.10",
-    "@storybook/addons": "^6.5.10",
-    "@storybook/builder-vite": "^0.2.2",
-    "@storybook/react": "^6.5.10",
-    "@storybook/testing-library": "^0.0.13",
-    "@storybook/theming": "^6.5.10",
     "@types/react": "^18.0.17",
     "@types/react-dom": "^18.0.6",
     "@typescript-eslint/eslint-plugin": "^5.33.1",
@@ -70,7 +58,6 @@
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.2.0",
-    "@fortawesome/free-regular-svg-icons": "^6.2.0",
     "@fortawesome/free-solid-svg-icons": "^6.2.0",
     "@fortawesome/react-fontawesome": "^0.2.0"
   }

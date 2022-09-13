@@ -3,6 +3,8 @@ import path from "path";
 import { defineConfig } from "vite";
 import cssInjectedByJsPlugin from "vite-plugin-css-injected-by-js";
 import dts from "vite-plugin-dts";
+import postcssNested from "postcss-nested";
+import postcssDesignTokens from "@csstools/postcss-design-tokens";
 
 export default defineConfig({
   build: {
@@ -29,4 +31,15 @@ export default defineConfig({
     }),
     cssInjectedByJsPlugin(),
   ],
+  css: {
+    postcss: {
+      plugins: [
+        postcssNested(),
+        postcssDesignTokens({
+          importAtRuleName: "tokens",
+          valueFunctionName: "token",
+        }),
+      ],
+    },
+  },
 });
