@@ -2,21 +2,21 @@
   "colors": {
     "basic": {
       "blue": {
-        "deep-blue": {
+        "deep": {
           "value": "#1F1F81"
         },
-        "primary-blue": {
+        "primary": {
           "value": "#1F46A1"
         },
-        "light-blue": {
+        "light": {
           "value": "#E8F8FF"
         },
-        "accent-blue": {
+        "accent": {
           "value": "#1FBCFF"
         }
       },
       "black": {
-        "black": {
+        "primary": {
           "value": "#000000"
         },
         "black-70": {
@@ -24,22 +24,22 @@
         }
       },
       "gray": {
-        "dark-gray": {
+        "dark": {
           "value": "#434952"
         },
-        "medium-gray": {
+        "medium": {
           "value": "#859099"
         },
-        "mild-gray": {
+        "mild": {
           "value": "#C0C6CC"
         },
-        "slight-gray": {
+        "slight": {
           "value": "#DBE1E4"
         },
-        "shimmer-gray": {
+        "shimmer": {
           "value": "#E6EDF0"
         },
-        "light-gray": {
+        "light": {
           "value": "#F0F3F5"
         },
         "white": {
@@ -49,26 +49,26 @@
     },
     "semantics": {
       "green": {
-        "success-green": {
+        "success": {
           "value": "#2DC9A4"
         },
-        "success-green-light": {
+        "success-light": {
           "value": "#EBF9F7"
         }
       },
       "yellow": {
-        "warning-yellow": {
+        "warning": {
           "value": "#FFC107"
         },
-        "warning-yellow-light": {
+        "warning-light": {
           "value": "#FFF9E6"
         }
       },
       "red": {
-        "error-red": {
+        "error": {
           "value": "#DD3546"
         },
-        "error-red-light": {
+        "error-light": {
           "value": "#FBEAEC"
         }
       }
@@ -83,71 +83,71 @@
         }
       },
       "orange": {
-        "orange": {
+        "primary": {
           "value": "#FF9900"
         },
-        "pastel-orange": {
+        "pastel": {
           "value": "#FFC49F"
         }
       },
       "yellow": {
-        "yellow": {
+        "primary": {
           "value": "#F8EA0E"
         },
-        "pastel-yellow": {
+        "pastel": {
           "value": "#FFF37E"
         },
-        "pastel-yellow-mild": {
+        "pastel-mild": {
           "value": "#FCF7CD"
         },
-        "pastel-yellow-light": {
+        "pastel-light": {
           "value": "#FEFBE7"
         }
       },
       "green": {
-        "deep-green": {
+        "primary": {
+          "value": "#26AD92"
+        },
+        "deep": {
           "value": "#006551"
         },
-        "olive-green": {
+        "olive": {
           "value": "#ADB311"
-        },
-        "green": {
-          "value": "#26AD92"
         },
         "aqua": {
           "value": "#5DCAC7"
         },
-        "emerald-green": {
+        "emerald": {
           "value": "#008000}"
         },
         "blue": {
-          "pastel-blue": {
+          "pastel": {
             "value": "#5AC0F1"
           },
-          "pastel-blue-light": {
+          "pastel-light": {
             "value": "#5AC0F11A"
           },
-          "pastel-pale-blue": {
+          "pastel-pale": {
             "value": "#ABC8DA"
           },
-          "pastel-pale-blue-medium": {
+          "pastel-pale-medium": {
             "value": "#CAE3F3"
           },
-          "pastel-pale-blue-mild": {
+          "pastel-pale-mild": {
             "value": "#D6E9FD"
           },
-          "pastel-pale-blue-light": {
+          "pastel-pale-light": {
             "value": "#E6F5FE"
           },
-          "pastel-pale-blue-light-2": {
+          "pastel-pale-light-2": {
             "value": "#F2FBFC"
           }
         },
         "lavender": {
-          "lavender": {
+          "primary": {
             "value": "#B78EFF"
           },
-          "pastel-lavender-light": {
+          "pastel-light": {
             "value": "#B78EFF19"
           }
         }
@@ -201,14 +201,6 @@
   "spacingPoint": {
     "value": 4
   },
-  "radius": {
-    "4": {
-      "value": "4px"
-    },
-    "8": {
-      "value": "8px"
-    }
-  },
   "elevations": {
     "elevation-1": {
       "value": "0px 1px 1px rgba(192, 198, 204, 0.5), 0px 2px 1px rgba(133, 144, 153, 0.1)"
@@ -217,7 +209,7 @@
       "value": "0px 2px 2px rgba(192, 198, 204, 0.14), 0px 3px 1px rgba(192, 198, 204, 0.12), 0px 1px 5px rgba(133, 144, 153, 0.2)"
     },
     "elevation-3": {
-      "value": " 0px 3px 4px rgba(192, 198, 204, 0.14), 0px 3px 3px rgba(192, 198, 204, 0.12), 0px 1px 8px rgba(133, 144, 153, 0.2)"
+      "value": "0px 3px 4px rgba(192, 198, 204, 0.14), 0px 3px 3px rgba(192, 198, 204, 0.12), 0px 1px 8px rgba(133, 144, 153, 0.2)"
     },
     "elevation-4": {
       "value": "0px 5px 5px rgba(192, 198, 204, 0.2), 0px 8px 10px rgba(192, 198, 204, 0.14), 0px 3px 14px rgba(67, 73, 82, 0.12)"
@@ -227,6 +219,14 @@
     },
     "elevation-6": {
       "value": "0px 24px 38px rgba(133, 144, 153, 0.14), 0px 9px 46px rgba(67, 73, 82, 0.12), 0px 11px 15px rgba(67, 73, 82, 0.2)"
+    }
+  },
+  "radius": {
+    "four": {
+      "value": "4px"
+    },
+    "eight": {
+      "value": "8px"
     }
   },
   "transition-timing": {
