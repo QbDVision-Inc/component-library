@@ -1,14 +1,5 @@
 @tokens url('../../../../design-tokens.json') format('style-dictionary3');
 
-.wrapper {
-  display: flex;
-  flex-direction: column;
-
-  &-disabled {
-    cursor: not-allowed;
-  }
-}
-
 .button {
   position: relative;
   display: flex;
@@ -21,6 +12,7 @@
   border-radius: token('radius.four');
   transition: token("transition-timing");
   background: transparent;
+  user-select: none;
 
   &-primary {
     background-color: token("colors.basic.blue.primary");
@@ -36,7 +28,7 @@
     color: token("colors.basic.blue.primary");
   }
 
-  &:hover {
+  &:hover:not(:disabled) {
     box-shadow: 0 4px 5px rgba(0, 0, 0, 0.14), 0 1px 10px rgba(0, 0, 0, 0.12), 0 2px 4px rgba(0, 0, 0, 0.2);
   }
 
@@ -63,7 +55,7 @@
   &-disabled {
     filter: grayscale(1);
     opacity: .3;
-    pointer-events: none;
+    cursor: not-allowed;
   }
 
   &-spinner {

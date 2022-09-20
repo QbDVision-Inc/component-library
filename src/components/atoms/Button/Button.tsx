@@ -31,28 +31,26 @@ const Button: FC<ButtonProps> = ({
   isSubmit,
   onClick,
 }) => (
-  <div className={c(style.wrapper, { [style["wrapper-disabled"]]: disabled })}>
-    <button
-      id={id}
-      className={c(
-        style.button,
-        style[`button-${type}`],
-        style[`button-${size}`],
-        { [style["button-disabled"]]: disabled },
-        { [style["button-loading"]]: loading }
-      )}
-      type={isSubmit ? "submit" : "button"}
-      onClick={onClick}
-      disabled={disabled}
-      title={title}
-    >
-      <span>{label}</span>
-      {loading && (
-        <div className={style["button-spinner"]}>
-          <Spinner />
-        </div>
-      )}
-    </button>
-  </div>
+  <button
+    id={id}
+    className={c(
+      style.button,
+      style[`button-${type}`],
+      style[`button-${size}`],
+      { [style["button-disabled"]]: disabled },
+      { [style["button-loading"]]: loading }
+    )}
+    type={isSubmit ? "submit" : "button"}
+    onClick={onClick}
+    disabled={disabled}
+    title={title}
+  >
+    <span>{label}</span>
+    {loading && (
+      <div className={style["button-spinner"]}>
+        <Spinner />
+      </div>
+    )}
+  </button>
 );
 export default Button;
