@@ -6,7 +6,7 @@ declare type LinkProps = {
     label?: string;
     href?: string;
     title?: string;
-    disabled?: boolean;
+    isDisabled?: boolean;
     isExternal?: boolean;
 };
 declare const Link: FC<LinkProps>;
