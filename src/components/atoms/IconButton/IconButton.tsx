@@ -23,7 +23,7 @@ const IconButton: FC<IconButtonProps> = ({
   return (
     <div
       className={classNames(buttonStyle.wrapper, {
-        [buttonStyle["wrapper-disabled"]]: disabled,
+        [buttonStyle.wrapperDisabled]: disabled,
       })}
     >
       <button
@@ -31,10 +31,10 @@ const IconButton: FC<IconButtonProps> = ({
         className={classNames(
           buttonStyle.button,
           {
-            [buttonStyle["button-primary"]]: type === "primary",
-            [buttonStyle["button-secondary"]]: type === "secondary",
-            [style["iconButton-tertiary"]]: type === "tertiary",
-            [buttonStyle["button-disabled"]]: disabled,
+            [buttonStyle.buttonPrimary]: type === "primary",
+            [buttonStyle.buttonSecondary]: type === "secondary",
+            [style.iconButtonTertiary]: type === "tertiary",
+            [buttonStyle.buttonDisabled]: disabled,
           },
           style.iconButton
         )}

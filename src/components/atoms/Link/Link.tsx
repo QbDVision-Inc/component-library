@@ -26,11 +26,11 @@ const Link: FC<LinkProps> = ({
   title,
   disabled,
 }) => (
-  <div className={c(style.wrapper, { [style["wrapper-disabled"]]: disabled })}>
+  <div className={c(style.wrapper, { [style.wrapperDisabled]: disabled })}>
     <a
       id={id}
       href={href}
-      className={c(style.link, { [style["button-disabled"]]: disabled })}
+      className={c(style.link, { [style.buttonDisabled]: disabled })}
       title={title}
       rel="noopener noreferrer"
       {...(isExternal && { target: "_blank" })}

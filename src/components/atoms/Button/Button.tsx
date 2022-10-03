@@ -14,10 +14,11 @@ type ButtonProps = {
   title?: string;
   type?: Type;
   size?: Size;
-  disabled?: boolean;
-  loading?: boolean;
+  isDisabled?: boolean;
+  isLoading?: boolean;
   isSubmit?: boolean;
-  onClick?: () => void;
+  isFullWidth?: boolean;
+  onClick?: (event?: any) => void;
 };
 
 const Button: FC<ButtonProps> = ({
@@ -26,9 +27,10 @@ const Button: FC<ButtonProps> = ({
   type = "primary",
   size = "large",
   title,
-  disabled,
-  loading,
+  isDisabled,
+  isLoading,
   isSubmit,
+  isFullWidth,
   onClick,
 }) => (
   <button
@@ -37,17 +39,18 @@ const Button: FC<ButtonProps> = ({
       style.button,
       style[`button-${type}`],
       style[`button-${size}`],
-      { [style["button-disabled"]]: disabled },
-      { [style["button-loading"]]: loading }
+      { [style.buttonDisabled]: isDisabled },
+      { [style.buttonLoading]: isLoading },
+      { [style.buttonFullwidth]: isFullWidth }
     )}
     type={isSubmit ? "submit" : "button"}
     onClick={onClick}
-    disabled={disabled}
+    disabled={isDisabled}
     title={title}
   >
     <span>{label}</span>
-    {loading && (
-      <div className={style["button-spinner"]}>
+    {isLoading && (
+      <div className={style.buttonSpinner}>
         <Spinner />
       </div>
     )}

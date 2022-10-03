@@ -9,15 +9,15 @@
   padding: 16px 60px;
 }
 
-.breadcrumbContent {
+.breadcrumb-content {
   margin-left: 25px;
 }
 
-.LogoContent {
+.Logo-content {
   margin-right: 25px;
 }
 
-.leftContent {
+.left-content {
   display: flex;
   align-content: center;
 }
