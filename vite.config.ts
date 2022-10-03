@@ -35,8 +35,7 @@ export default defineConfig(({ command }) => {
     css: {
       modules: {
         localsConvention: "camelCase",
-        generateScopedName:
-          command === "serve" ? "[local]___[hash:base64:5]" : "[hash:base64:5]",
+        generateScopedName: "[local]___[hash:base64:5]",
       },
       postcss: {
         plugins: [

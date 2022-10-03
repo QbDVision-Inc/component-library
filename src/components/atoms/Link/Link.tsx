@@ -14,7 +14,7 @@ type LinkProps = {
   label?: string;
   href?: string;
   title?: string;
-  disabled?: boolean;
+  isDisabled?: boolean;
   isExternal?: boolean;
 };
 
@@ -24,20 +24,18 @@ const Link: FC<LinkProps> = ({
   href,
   isExternal,
   title,
-  disabled,
+  isDisabled,
 }) => (
-  <div className={c(style.wrapper, { [style.wrapperDisabled]: disabled })}>
-    <a
-      id={id}
-      href={href}
-      className={c(style.link, { [style.buttonDisabled]: disabled })}
-      title={title}
-      rel="noopener noreferrer"
-      {...(isExternal && { target: "_blank" })}
-    >
-      <span className={style.label}>{label}</span>
-      {isExternal && <FontAwesomeIcon icon={faArrowUpRightFromSquare} />}
-    </a>
-  </div>
+  <a
+    id={id}
+    href={isDisabled ? "#" : href}
+    className={c(style.link, { [style.linkDisabled]: isDisabled })}
+    title={title}
+    rel="noopener noreferrer"
+    {...(isExternal && { target: "_blank" })}
+  >
+    <span className={style.label}>{label}</span>
+    {isExternal && <FontAwesomeIcon icon={faArrowUpRightFromSquare} />}
+  </a>
 );
 export default Link;
