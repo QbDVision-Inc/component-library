@@ -7,10 +7,11 @@ declare type ButtonProps = {
     title?: string;
     type?: Type;
     size?: Size;
-    disabled?: boolean;
-    loading?: boolean;
+    isDisabled?: boolean;
+    isLoading?: boolean;
     isSubmit?: boolean;
-    onClick?: () => void;
+    isFullWidth?: boolean;
+    onClick?: (event?: any) => void;
 };
 declare const Button: FC<ButtonProps>;
 export default Button;
