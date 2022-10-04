@@ -39,9 +39,9 @@ const Button: FC<ButtonProps> = ({
       style.button,
       style[`button-${type}`],
       style[`button-${size}`],
-      { [style.buttonDisabled]: isDisabled },
-      { [style.buttonLoading]: isLoading },
-      { [style.buttonFullwidth]: isFullWidth }
+      { [style["button-disabled"]]: isDisabled },
+      { [style["button-loading"]]: isLoading },
+      { [style["button-fullwidth"]]: isFullWidth }
     )}
     type={isSubmit ? "submit" : "button"}
     onClick={onClick}
@@ -50,8 +50,8 @@ const Button: FC<ButtonProps> = ({
   >
     <span>{label}</span>
     {isLoading && (
-      <div className={style.buttonSpinner}>
-        <Spinner />
+      <div className={style["button-spinner"]}>
+        <Spinner {...(type !== "primary" && { color: "blue" })} />
       </div>
     )}
   </button>

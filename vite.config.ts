@@ -47,5 +47,12 @@ export default defineConfig(({ command }) => {
         ],
       },
     },
+    test: {
+      globals: true,
+      environment: "jsdom",
+      coverage: {
+        reporter: "html",
+      },
+    },
   };
 });

@@ -1,4 +1,5 @@
 import React, { FC } from "react";
+import tokens from "../../../../design-tokens.json";
 
 import style from "./Spinner.module.css";
 
@@ -10,7 +11,11 @@ type SpinnerProps = {
 const Spinner: FC<SpinnerProps> = ({ color, size = 24 }) => (
   <svg
     className={style.spinner}
-    fill={color === "blue" ? "#1f46a1" : "#fff"}
+    fill={
+      color === "blue"
+        ? tokens.colors.basic.blue.primary.value
+        : tokens.colors.basic.gray.white.value
+    }
     width={size}
     height={size}
     viewBox="0 0 24 24"
