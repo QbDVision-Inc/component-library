@@ -12,6 +12,7 @@ declare type ButtonProps = {
     isSubmit?: boolean;
     isFullWidth?: boolean;
     onClick?: (event?: any) => void;
+    dataSet?: DOMStringMap;
 };
 declare const Button: FC<ButtonProps>;
 export default Button;
