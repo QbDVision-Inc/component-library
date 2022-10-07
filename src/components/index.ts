@@ -6,3 +6,4 @@ export { default as Spinner } from "../components/atoms/Spinner";
 
 export { default as ButtonGroup } from "../components/molecules/ButtonGroup";
 export { default as NavBar } from "../components/molecules/NavBar";
+export { default as tokens } from "../../design-tokens.json";

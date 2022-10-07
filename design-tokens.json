@@ -1,235 +1,67 @@
 {
-  "colors": {
-    "basic": {
-      "blue": {
-        "deep": {
-          "value": "#1F1F81"
-        },
-        "primary": {
-          "value": "#1F46A1"
-        },
-        "light": {
-          "value": "#E8F8FF"
-        },
-        "accent": {
-          "value": "#1FBCFF"
-        }
-      },
-      "black": {
-        "primary": {
-          "value": "#000000"
-        },
-        "black-70": {
-          "value": "#000000B2"
-        }
-      },
-      "gray": {
-        "dark": {
-          "value": "#434952"
-        },
-        "medium": {
-          "value": "#859099"
-        },
-        "mild": {
-          "value": "#C0C6CC"
-        },
-        "slight": {
-          "value": "#DBE1E4"
-        },
-        "shimmer": {
-          "value": "#E6EDF0"
-        },
-        "light": {
-          "value": "#F0F3F5"
-        },
-        "white": {
-          "value": "#FFFFFF"
-        }
-      }
-    },
-    "semantics": {
-      "green": {
-        "success": {
-          "value": "#2DC9A4"
-        },
-        "success-light": {
-          "value": "#EBF9F7"
-        }
-      },
-      "yellow": {
-        "warning": {
-          "value": "#FFC107"
-        },
-        "warning-light": {
-          "value": "#FFF9E6"
-        }
-      },
-      "red": {
-        "error": {
-          "value": "#DD3546"
-        },
-        "error-light": {
-          "value": "#FBEAEC"
-        }
-      }
-    },
-    "ramps": {
-      "red": {
-        "deep-maroon": {
-          "value": "#2E0402"
-        },
-        "cherry-red": {
-          "value": "#993300"
-        }
-      },
-      "orange": {
-        "primary": {
-          "value": "#FF9900"
-        },
-        "pastel": {
-          "value": "#FFC49F"
-        }
-      },
-      "yellow": {
-        "primary": {
-          "value": "#F8EA0E"
-        },
-        "pastel": {
-          "value": "#FFF37E"
-        },
-        "pastel-mild": {
-          "value": "#FCF7CD"
-        },
-        "pastel-light": {
-          "value": "#FEFBE7"
-        }
-      },
-      "green": {
-        "primary": {
-          "value": "#26AD92"
-        },
-        "deep": {
-          "value": "#006551"
-        },
-        "olive": {
-          "value": "#ADB311"
-        },
-        "aqua": {
-          "value": "#5DCAC7"
-        },
-        "emerald": {
-          "value": "#008000}"
-        },
-        "blue": {
-          "pastel": {
-            "value": "#5AC0F1"
-          },
-          "pastel-light": {
-            "value": "#5AC0F11A"
-          },
-          "pastel-pale": {
-            "value": "#ABC8DA"
-          },
-          "pastel-pale-medium": {
-            "value": "#CAE3F3"
-          },
-          "pastel-pale-mild": {
-            "value": "#D6E9FD"
-          },
-          "pastel-pale-light": {
-            "value": "#E6F5FE"
-          },
-          "pastel-pale-light-2": {
-            "value": "#F2FBFC"
-          }
-        },
-        "lavender": {
-          "primary": {
-            "value": "#B78EFF"
-          },
-          "pastel-light": {
-            "value": "#B78EFF19"
-          }
-        }
-      }
-    }
-  },
-  "typography": {
-    "font-size": {
-      "12": {
-        "value": 12
-      },
-      "14": {
-        "value": 14
-      },
-      "16": {
-        "value": 16
-      },
-      "18": {
-        "value": 18
-      },
-      "24": {
-        "value": 24
-      },
-      "36": {
-        "value": 36
-      }
-    },
-    "font-weight": {
-      "regular": {
-        "value": 400
-      },
-      "semi-bold": {
-        "value": 600
-      },
-      "bold": {
-        "value": 700
-      }
-    },
-    "typeface": {
-      "openSans": {
-        "value": "openSans"
-      },
-      "TNR": {
-        "value": "TNR"
-      },
-      "Roboto": {
-        "value": "Roboto"
-      }
-    }
-  },
-  "spacingPoint": {
-    "value": 4
-  },
-  "elevations": {
-    "elevation-1": {
-      "value": "0px 1px 1px rgba(192, 198, 204, 0.5), 0px 2px 1px rgba(133, 144, 153, 0.1)"
-    },
-    "elevation-2": {
-      "value": "0px 2px 2px rgba(192, 198, 204, 0.14), 0px 3px 1px rgba(192, 198, 204, 0.12), 0px 1px 5px rgba(133, 144, 153, 0.2)"
-    },
-    "elevation-3": {
-      "value": "0px 3px 4px rgba(192, 198, 204, 0.14), 0px 3px 3px rgba(192, 198, 204, 0.12), 0px 1px 8px rgba(133, 144, 153, 0.2)"
-    },
-    "elevation-4": {
-      "value": "0px 5px 5px rgba(192, 198, 204, 0.2), 0px 8px 10px rgba(192, 198, 204, 0.14), 0px 3px 14px rgba(67, 73, 82, 0.12)"
-    },
-    "elevation-5": {
-      "value": "0px 24px 38px rgba(133, 144, 153, 0.14), 0px 9px 46px rgba(67, 73, 82, 0.12), 0px 11px 15px rgba(67, 73, 82, 0.2)"
-    },
-    "elevation-6": {
-      "value": "0px 24px 38px rgba(133, 144, 153, 0.14), 0px 9px 46px rgba(67, 73, 82, 0.12), 0px 11px 15px rgba(67, 73, 82, 0.2)"
-    }
-  },
-  "radius": {
-    "four": {
-      "value": "4px"
-    },
-    "eight": {
-      "value": "8px"
-    }
-  },
-  "transition-timing": {
-    "value": ".3s"
+  "custom-properties": {
+    "--color-blue-deep": "#1F1F81",
+    "--color-blue-primary": "#1F46A1",
+    "--color-blue-light": "#E8F8FF",
+    "--color-blue-accent": "#1FBCFF",
+    "--color-blue-pastel": "#5AC0F1",
+    "--color-blue-pastel-light": "#5AC0F11A",
+    "--color-blue-pastel-pale": "#ABC8DA",
+    "--color-blue-pastel-pale-medium": "#CAE3F3",
+    "--color-blue-pastel-pale-mild": "#D6E9FD",
+    "--color-blue-pastel-pale-light": "#E6F5FE",
+    "--color-blue-pastel-pale-light-2": "#F2FBFC",
+    "--color-black-primary": "#000000",
+    "--color-black-black-70": "#000000B2",
+    "--color-white": "#FFFFFF",
+    "--color-gray-dark": "#434952",
+    "--color-gray-medium": "#859099",
+    "--color-gray-mild": "#C0C6CC",
+    "--color-gray-slight": "#DBE1E4",
+    "--color-gray-shimmer": "#E6EDF0",
+    "--color-gray-light": "#F0F3F5",
+    "--color-green-success": "#2DC9A4",
+    "--color-green-success-light": "#EBF9F7",
+    "--color-green-primary": "#26AD92",
+    "--color-green-deep": "#006551",
+    "--color-green-olive": "#ADB311",
+    "--color-green-aqua": "#5DCAC7",
+    "--color-green-emerald": "#008000",
+    "--color-yellow-warning": "#FFC107",
+    "--color-yellow-warning-light": "#FFF9E6",
+    "--color-red-error": "#DD3546",
+    "--color-red-error-light": "#FBEAEC",
+    "--color-red-deep-maroon": "#2E0402",
+    "--color-red-cherry-red": "#993300",
+    "--color-orange-primary": "#FF9900",
+    "--color-orange-pastel": "#FFC49F",
+    "--color-yellow-primary": "#F8EA0E",
+    "--color-yellow-pastel": "#FFF37E",
+    "--color-yellow-pastel-mild": "#FCF7CD",
+    "--color-yellow-pastel-light": "#FEFBE7",
+    "--color-lavender-primary": "#B78EFF",
+    "--color-lavender-pastel-light": "#B78EFF19",
+    "--font-size-12": "12px",
+    "--font-size-14": "14px",
+    "--font-size-16": "16px",
+    "--font-size-18": "18px",
+    "--font-size-24": "24px",
+    "--font-size-36": "36px",
+    "--font-weight-regular": "400",
+    "--font-weight-semi-bold": "600",
+    "--font-weight-bold": "700",
+    "--font-family-openSans": "\"Open Sans\", Arial, sans-serif",
+    "--font-family-TNR": "\"TNR\", Arial, sans-serif",
+    "--font-family-Roboto": "\"Roboto\", Arial, sans-serif",
+    "--spacing-point": "4",
+    "--elevations-1": "\"0px 1px 1px rgba(192, 198, 204, 0.5), 0px 2px 1px rgba(133, 144, 153, 0.1)\"",
+    "--elevations-2": "\"0px 2px 2px rgba(192, 198, 204, 0.14), 0px 3px 1px rgba(192, 198, 204, 0.12), 0px 1px 5px rgba(133, 144, 153, 0.2)\"",
+    "--elevations-3": "\"0px 3px 4px rgba(192, 198, 204, 0.14), 0px 3px 3px rgba(192, 198, 204, 0.12), 0px 1px 8px rgba(133, 144, 153, 0.2)\"",
+    "--elevations-4": "\"0px 5px 5px rgba(192, 198, 204, 0.2), 0px 8px 10px rgba(192, 198, 204, 0.14), 0px 3px 14px rgba(67, 73, 82, 0.12)\"",
+    "--elevations-5": "\"0px 24px 38px rgba(133, 144, 153, 0.14), 0px 9px 46px rgba(67, 73, 82, 0.12), 0px 11px 15px rgba(67, 73, 82, 0.2)\"",
+    "--elevations-6": "\"0px 24px 38px rgba(133, 144, 153, 0.14), 0px 9px 46px rgba(67, 73, 82, 0.12), 0px 11px 15px rgba(67, 73, 82, 0.2)\"",
+    "--radius-4": "4px",
+    "--radius-8": "8px",
+    "--transition-timing": ".3s"
   }
 }

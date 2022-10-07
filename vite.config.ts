@@ -4,9 +4,9 @@ import { defineConfig } from "vite";
 import cssInjectedByJsPlugin from "vite-plugin-css-injected-by-js";
 import dts from "vite-plugin-dts";
 import postcssNested from "postcss-nested";
-import postcssDesignTokens from "@csstools/postcss-design-tokens";
+import postcssCustomProperties from "postcss-custom-properties";
 
-export default defineConfig(({ command }) => {
+export default defineConfig(() => {
   return {
     build: {
       lib: {
@@ -40,9 +40,10 @@ export default defineConfig(({ command }) => {
       postcss: {
         plugins: [
           postcssNested(),
-          postcssDesignTokens({
-            importAtRuleName: "tokens",
-            valueFunctionName: "token",
+          postcssCustomProperties({
+            importFrom: "./design-tokens.css",
+            exportTo: "./design-tokens.json",
+            preserve: false,
           }),
         ],
       },

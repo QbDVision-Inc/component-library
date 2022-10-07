@@ -19,6 +19,7 @@ type ButtonProps = {
   isSubmit?: boolean;
   isFullWidth?: boolean;
   onClick?: (event?: any) => void;
+  dataSet?: DOMStringMap;
 };
 
 const Button: FC<ButtonProps> = ({
@@ -32,28 +33,32 @@ const Button: FC<ButtonProps> = ({
   isSubmit,
   isFullWidth,
   onClick,
-}) => (
-  <button
-    id={id}
-    className={c(
-      style.button,
-      style[`button-${type}`],
-      style[`button-${size}`],
-      { [style["button-disabled"]]: isDisabled },
-      { [style["button-loading"]]: isLoading },
-      { [style["button-fullwidth"]]: isFullWidth }
-    )}
-    type={isSubmit ? "submit" : "button"}
-    onClick={onClick}
-    disabled={isDisabled}
-    title={title}
-  >
-    <span>{label}</span>
-    {isLoading && (
-      <div className={style["button-spinner"]}>
-        <Spinner {...(type !== "primary" && { color: "blue" })} />
-      </div>
-    )}
-  </button>
-);
+  ...dataSet
+}) => {
+  return (
+    <button
+      {...dataSet}
+      id={id}
+      className={c(
+        style.button,
+        style[`button-${type}`],
+        style[`button-${size}`],
+        { [style["button-disabled"]]: isDisabled },
+        { [style["button-loading"]]: isLoading },
+        { [style["button-fullwidth"]]: isFullWidth }
+      )}
+      type={isSubmit ? "submit" : "button"}
+      onClick={onClick}
+      disabled={isDisabled}
+      title={title}
+    >
+      <span>{label}</span>
+      {isLoading && (
+        <div className={style["button-spinner"]}>
+          <Spinner {...(type !== "primary" && { color: "blue" })} />
+        </div>
+      )}
+    </button>
+  );
+};
 export default Button;

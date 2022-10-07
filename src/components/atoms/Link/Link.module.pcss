@@ -1,22 +1,18 @@
-@tokens url('../../../../design-tokens.json') format('style-dictionary3');
-
-
-
 .link {
-  font-family: "openSans", Arial, sans-serif;
+  font-family: var(--font-family-openSans);
 
   &:link, &:visited {
     position: relative;
     font-size: 14px;
-    color: token('colors.basic.blue.primary');
+    color: var(--color-blue-primary);
     background: transparent;
-    transition: token("transition-timing");
-    font-weight: token('typography.font-weight.semi-bold');
+    transition: var(--transition-timing);
+    font-weight: var(--font-weight-semi-bold);
     text-decoration: none;
 
     &::after {
       content: "";
-      transition: all token("transition-timing");
+      transition: all var(--transition-timing);
     }
   }
 
@@ -29,7 +25,7 @@
       display: inline-block;
       width: 100%;
       height: 1px;
-      background: token('colors.basic.blue.primary');
+      background: var(--color-blue-primary);
       text-decoration: underline;
     }
   }

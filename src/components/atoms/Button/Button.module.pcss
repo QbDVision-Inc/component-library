@@ -1,5 +1,3 @@
-@tokens url('../../../../design-tokens.json') format('style-dictionary3');
-
 .button {
   position: relative;
   display: flex;
@@ -7,25 +5,27 @@
   align-items: center;
   border: 1px solid transparent;
   height: 36px;
-  font-size: token("typography.font-size.14" to px);
-  color: token("colors.basic.gray.white");
-  border-radius: token('radius.four');
-  transition: token("transition-timing");
+  font-size: var(--font-size-14);
+  color: var(--color-white);
+  border-radius: var(--radius-4);
+  transition: var(--transition-timing);
   background: transparent;
   user-select: none;
+  font-weight: var(--font-weight-semi-bold);
+  font-family: var(--font-family-openSans);
 
   &-primary {
-    background-color: token("colors.basic.blue.primary");
+    background-color: var(--color-blue-primary);
   }
 
   &-secondary {
-    border: 1px solid token("colors.basic.blue.primary");
-    color: token("colors.basic.blue.primary");
-    background-color: token("colors.basic.gray.white");
+    border: 1px solid var(--color-blue-primary);
+    color: var(--color-blue-primary);
+    background-color: var(--color-white);
   }
 
   &-ghost {
-    color: token("colors.basic.blue.primary");
+    color: var(--color-blue-primary);
   }
 
   &:hover:not(:disabled) {
@@ -34,7 +34,7 @@
 
   &-ghost {
     &:hover{
-      border: 1px solid token("colors.basic.blue.primary");
+      border: 1px solid var(--color-blue-primary);
       box-shadow: none;
     }
     &:active {

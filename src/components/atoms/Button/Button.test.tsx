@@ -52,13 +52,13 @@ describe("Button test", () => {
     const svgElement = screen.getByRole("button").querySelector("svg");
 
     expect(svgElement?.getAttribute("fill")).toBe(
-      tokens.colors.basic.gray.white.value
+      tokens["custom-properties"]["--color-white"]
     );
 
     rerender(<Button type="secondary" isLoading />);
 
     expect(svgElement?.getAttribute("fill")).toBe(
-      tokens.colors.basic.blue.primary.value
+      tokens["custom-properties"]["--color-blue-primary"]
     );
   });
 });

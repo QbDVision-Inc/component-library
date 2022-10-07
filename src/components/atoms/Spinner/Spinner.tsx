@@ -13,8 +13,8 @@ const Spinner: FC<SpinnerProps> = ({ color, size = 24 }) => (
     className={style.spinner}
     fill={
       color === "blue"
-        ? tokens.colors.basic.blue.primary.value
-        : tokens.colors.basic.gray.white.value
+        ? tokens["custom-properties"]["--color-blue-primary"]
+        : tokens["custom-properties"]["--color-white"]
     }
     width={size}
     height={size}
