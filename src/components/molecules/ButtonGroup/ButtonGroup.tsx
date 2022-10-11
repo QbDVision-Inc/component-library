@@ -1,5 +1,5 @@
 import React, { FC, ReactNode } from "react";
-import style from "./buttonGroup.module.pcss";
+import style from "./ButtonGroup.module.pcss";
 
 export type ButtonGroupProps = {
   children?: ReactNode;
