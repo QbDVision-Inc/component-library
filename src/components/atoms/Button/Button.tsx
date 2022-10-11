@@ -1,6 +1,9 @@
-import React, { FC } from "react";
+import React, { FC, forwardRef } from "react";
 import c from "classnames";
 import Spinner from "../Spinner";
+
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCaretDown } from "@fortawesome/free-solid-svg-icons";
 
 import style from "./Button.module.pcss";
 
@@ -8,57 +11,77 @@ export type Type = "primary" | "secondary" | "ghost";
 
 export type Size = "large" | "small";
 
-type ButtonProps = {
+export type ButtonProps = {
   id?: string;
   label?: string;
   title?: string;
   type?: Type;
   size?: Size;
+  hasArrow?: boolean;
   isDisabled?: boolean;
   isLoading?: boolean;
   isSubmit?: boolean;
   isFullWidth?: boolean;
   onClick?: (event?: any) => void;
+  onKeyDown?: (event?: any) => void;
+  ref?: React.RefObject<any>;
   dataSet?: DOMStringMap;
 };
 
-const Button: FC<ButtonProps> = ({
-  id,
-  label = "Button",
-  type = "primary",
-  size = "large",
-  title,
-  isDisabled,
-  isLoading,
-  isSubmit,
-  isFullWidth,
-  onClick,
-  ...dataSet
-}) => {
+const Button: FC<ButtonProps> = (
+  {
+    id,
+    label = "Button",
+    type = "primary",
+    size = "large",
+    hasArrow,
+    title,
+    isDisabled,
+    isLoading,
+    isSubmit,
+    isFullWidth,
+    onClick,
+    onKeyDown,
+    ...dataSet
+  },
+  ref
+) => {
   return (
     <button
       {...dataSet}
       id={id}
       className={c(
         style.button,
-        style[`button-${type}`],
-        style[`button-${size}`],
-        { [style["button-disabled"]]: isDisabled },
-        { [style["button-loading"]]: isLoading },
-        { [style["button-fullwidth"]]: isFullWidth }
+        style[`${type}`],
+        style[`${size}`],
+        { [style.disabled]: isDisabled },
+        { [style.loading]: isLoading },
+        { [style.fullwidth]: isFullWidth }
       )}
       type={isSubmit ? "submit" : "button"}
-      onClick={onClick}
       disabled={isDisabled}
       title={title}
+      ref={ref}
+      onClick={onClick}
+      onKeyDown={onKeyDown}
     >
       <span>{label}</span>
       {isLoading && (
-        <div className={style["button-spinner"]}>
+        <div className={style.spinner}>
           <Spinner {...(type !== "primary" && { color: "blue" })} />
         </div>
+      )}
+      {hasArrow && (
+        <FontAwesomeIcon
+          className={style.icon}
+          style={{ marginLeft: "10px" }}
+          icon={faCaretDown}
+          fontSize="12px"
+        />
       )}
     </button>
   );
 };
-export default Button;
+
+// @ts-ignore
+export default forwardRef(Button);

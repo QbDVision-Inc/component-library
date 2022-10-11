@@ -1,12 +1,41 @@
 import Button from "./components/atoms/Button/Button";
 import ButtonGroup from "./components/molecules/ButtonGroup/ButtonGroup";
 import Link from "./components/atoms/Link";
+import { DropdownButton } from "./components";
+import { faAdd } from "@fortawesome/free-solid-svg-icons";
+
+const data = [
+  {
+    value: "General Attribute",
+    key: "addGeneralAttribute",
+    disabled: false,
+    title: "Add",
+  },
+  {
+    value: "Quality Attribute",
+    key: "addQualityAttribute",
+    disabled: false,
+    title: "Add",
+  },
+  {
+    value: "Performance Attribute",
+    key: "addPerformanceAttribute",
+    disabled: false,
+    title: "Add",
+  },
+];
 
 function App() {
   return (
     <div style={{ textAlign: "center" }}>
+      <DropdownButton
+        label={"xyz"}
+        options={data}
+        onOptionsSelect={(e) => console.log(e.value)}
+      />
+      <br />
       <ButtonGroup>
-        <Button label="Button 1" onClick={() => alert("111")} />
+        <Button label="Button 1" onClick={() => alert("111")} hasArrow />
         <Button
           type={"secondary"}
           label="Button 2"
