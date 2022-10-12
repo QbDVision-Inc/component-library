@@ -8,10 +8,14 @@ import postcssCustomProperties from "postcss-custom-properties";
 
 export default defineConfig(() => {
   return {
+    esbuild: {
+      minifyIdentifiers: false,
+    },
     build: {
       lib: {
         entry: path.resolve(__dirname, "src/lib/index.ts"),
         name: "ComponentLibrary",
+        formats: ["es", "umd"],
         fileName: (format) => `component-library.${format}.js`,
       },
     },
