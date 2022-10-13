@@ -1,5 +1,6 @@
 import React, { FC } from "react";
 
+import classNames from "classnames";
 import { Menu, MenuItem } from "@szhsin/react-menu";
 import Button from "../../atoms/Button";
 import { ButtonProps } from "../../atoms/Button/Button";
@@ -31,7 +32,7 @@ const DropdownButton: FC<DropdownButtonProps> = ({
   ...rest
 }) => {
   return (
-    <div className={style.dropdown}>
+    <div className={classNames([style.dropdown, { [style.isIcon]: isIcon }])}>
       <Menu
         className={style.menu}
         menuClassName={style.list}

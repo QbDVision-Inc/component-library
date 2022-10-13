@@ -23,8 +23,6 @@ export type ButtonProps = {
   isSubmit?: boolean;
   isFullWidth?: boolean;
   onClick?: (event?: any) => void;
-  onKeyDown?: (event?: any) => void;
-  ref?: React.RefObject<any>;
   dataSet?: DOMStringMap;
   children?: ReactNode;
 };
