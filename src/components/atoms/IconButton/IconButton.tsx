@@ -5,46 +5,47 @@ import { IconProp } from "@fortawesome/fontawesome-svg-core";
 import { faFileLines } from "@fortawesome/free-solid-svg-icons";
 
 import style from "./IconButton.module.pcss";
-import buttonStyle from "../Button/Button.module.pcss";
+import Button from "../Button";
+import { Type } from "../Button/Button";
 
 type IconButtonProps = {
   icon?: IconProp;
-  type?: "primary" | "secondary" | "tertiary";
+  iconSize?: string;
+  isCircle?: boolean;
+  type?: Type;
   onClick?: () => void;
-  disabled?: boolean;
+  isDisabled?: boolean;
 };
 
-const IconButton: FC<IconButtonProps> = ({
-  icon = faFileLines,
-  type = "primary",
-  onClick,
-  disabled,
-}) => {
+const IconButton: FC<IconButtonProps> = (
+  {
+    icon = faFileLines,
+    iconSize = "18px",
+    type = "primary",
+    onClick,
+    isCircle,
+    isDisabled,
+  },
+  ref
+) => {
   return (
     <div
-      className={classNames(buttonStyle.wrapper, {
-        [buttonStyle.wrapperDisabled]: disabled,
+      className={classNames(style.iconButton, {
+        [style.isCircle]: isCircle,
       })}
     >
-      <button
-        type="button"
-        className={classNames(
-          buttonStyle.button,
-          {
-            [buttonStyle.primary]: type === "primary",
-            [buttonStyle.secondary]: type === "secondary",
-            [style.iconButtonTertiary]: type === "tertiary",
-            [buttonStyle.disabled]: disabled,
-          },
-          style.iconButton
-        )}
+      <Button
+        type={type}
         onClick={onClick}
-        disabled={disabled}
+        isDisabled={isDisabled}
+        isFullWidth
+        ref={ref}
       >
-        <FontAwesomeIcon icon={icon} fontSize="18px" />
-      </button>
+        <FontAwesomeIcon icon={icon} fontSize={iconSize} />
+      </Button>
     </div>
   );
 };
 
-export default IconButton;
+// @ts-ignore
+export default React.forwardRef(IconButton);
