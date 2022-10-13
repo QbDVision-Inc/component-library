@@ -1,18 +1,21 @@
-import { FC } from "react";
+import React from "react";
 export declare type Type = "primary" | "secondary" | "ghost";
 export declare type Size = "large" | "small";
-declare type ButtonProps = {
+export declare type ButtonProps = {
     id?: string;
     label?: string;
     title?: string;
     type?: Type;
     size?: Size;
+    hasArrow?: boolean;
     isDisabled?: boolean;
     isLoading?: boolean;
     isSubmit?: boolean;
     isFullWidth?: boolean;
     onClick?: (event?: any) => void;
+    onKeyDown?: (event?: any) => void;
+    ref?: React.RefObject<any>;
     dataSet?: DOMStringMap;
 };
-declare const Button: FC<ButtonProps>;
-export default Button;
+declare const _default: React.ForwardRefExoticComponent<Pick<ButtonProps, "id" | "label" | "type" | "size" | "hasArrow" | "title" | "isDisabled" | "isLoading" | "isSubmit" | "isFullWidth" | "onClick" | "onKeyDown" | "dataSet"> & React.RefAttributes<unknown>>;
+export default _default;
