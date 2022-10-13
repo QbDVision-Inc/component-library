@@ -1,4 +1,4 @@
-import React, { FC, forwardRef } from "react";
+import React, { FC, forwardRef, ReactNode } from "react";
 import c from "classnames";
 import Spinner from "../Spinner";
 
@@ -26,6 +26,7 @@ export type ButtonProps = {
   onKeyDown?: (event?: any) => void;
   ref?: React.RefObject<any>;
   dataSet?: DOMStringMap;
+  children?: ReactNode;
 };
 
 const Button: FC<ButtonProps> = (
@@ -41,7 +42,7 @@ const Button: FC<ButtonProps> = (
     isSubmit,
     isFullWidth,
     onClick,
-    onKeyDown,
+    children,
     ...dataSet
   },
   ref
@@ -63,9 +64,8 @@ const Button: FC<ButtonProps> = (
       title={title}
       ref={ref}
       onClick={onClick}
-      onKeyDown={onKeyDown}
     >
-      <span>{label}</span>
+      {children || <span>{label}</span>}
       {isLoading && (
         <div className={style.spinner}>
           <Spinner {...(type !== "primary" && { color: "blue" })} />
