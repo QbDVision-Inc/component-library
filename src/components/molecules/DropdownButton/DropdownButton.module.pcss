@@ -1,3 +1,17 @@
+.dropdown {
+  display: inline-block;
+
+  & [type="button"]:hover, &:focus-within [type="button"] {
+    border: 1px solid var(--color-gray-medium);
+    background-color: var(--color-gray-light);
+    box-shadow: none;
+  }
+
+  & [data-icon="ellipsis-vertical"] {
+    color: var(--color-gray-medium);
+  }
+}
+
 .menu {
   font-family: var(--font-family-openSans);
   font-size: var(--font-size-14);
