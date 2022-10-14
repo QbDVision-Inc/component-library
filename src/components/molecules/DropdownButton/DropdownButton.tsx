@@ -44,10 +44,10 @@ const DropdownButton: FC<DropdownButtonProps> = ({
           )
         }
       >
-        {options.map((item, index) => (
+        {options.map((item) => (
           <MenuItem
             className={style.item}
-            key={index}
+            key={item.key}
             value={item.key}
             disabled={item.disabled}
             onClick={onOptionsSelect}
