@@ -2,13 +2,13 @@ import React, { FC } from "react";
 
 import classNames from "classnames";
 import { Menu, MenuItem } from "@szhsin/react-menu";
+import { faEllipsisVertical } from "@fortawesome/free-solid-svg-icons";
 import Button from "../../atoms/Button";
 import { ButtonProps } from "../../atoms/Button/Button";
 import IconButton from "../../atoms/IconButton";
 
 import "@szhsin/react-menu/dist/index.css";
 import style from "./DropdownButton.module.pcss";
-import { faEllipsisVertical } from "@fortawesome/free-solid-svg-icons";
 
 type option = {
   key: string;
@@ -38,7 +38,7 @@ const DropdownButton: FC<DropdownButtonProps> = ({
         menuClassName={style.list}
         menuButton={
           isIcon ? (
-            <IconButton type="ghost" icon={faEllipsisVertical} {...rest} />
+            <IconButton icon={faEllipsisVertical} {...rest} type="ghost" />
           ) : (
             <Button {...rest} label={label} hasArrow />
           )

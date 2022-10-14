@@ -1,10 +1,13 @@
-import { FC } from "react";
-import { IconDefinition } from "@fortawesome/fontawesome-svg-core";
+import React from "react";
+import { IconProp } from "@fortawesome/fontawesome-svg-core";
+import { Type } from "../Button/Button";
 declare type IconButtonProps = {
-    icon?: IconDefinition;
-    type?: "primary" | "secondary" | "tertiary";
+    icon?: IconProp;
+    iconSize?: string;
+    isCircle?: boolean;
+    type?: Type;
     onClick?: () => void;
-    disabled?: boolean;
+    isDisabled?: boolean;
 };
-declare const IconButton: FC<IconButtonProps>;
-export default IconButton;
+declare const _default: React.ForwardRefExoticComponent<IconButtonProps & React.RefAttributes<unknown>>;
+export default _default;

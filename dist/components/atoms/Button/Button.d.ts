@@ -1,4 +1,4 @@
-import React from "react";
+import React, { ReactNode } from "react";
 export declare type Type = "primary" | "secondary" | "ghost";
 export declare type Size = "large" | "small";
 export declare type ButtonProps = {
@@ -13,9 +13,8 @@ export declare type ButtonProps = {
     isSubmit?: boolean;
     isFullWidth?: boolean;
     onClick?: (event?: any) => void;
-    onKeyDown?: (event?: any) => void;
-    ref?: React.RefObject<any>;
     dataSet?: DOMStringMap;
+    children?: ReactNode;
 };
-declare const _default: React.ForwardRefExoticComponent<Pick<ButtonProps, "id" | "label" | "type" | "size" | "hasArrow" | "title" | "isDisabled" | "isLoading" | "isSubmit" | "isFullWidth" | "onClick" | "onKeyDown" | "dataSet"> & React.RefAttributes<unknown>>;
+declare const _default: React.ForwardRefExoticComponent<ButtonProps & React.RefAttributes<unknown>>;
 export default _default;

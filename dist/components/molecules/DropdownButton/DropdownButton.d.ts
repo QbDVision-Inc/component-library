@@ -9,6 +9,7 @@ interface DropdownButtonProps extends Omit<ButtonProps, "onClick" | "onKeyDown">
     label: string;
     options: option[];
     onOptionsSelect: (e: any) => void;
+    isIcon?: boolean;
 }
 declare const DropdownButton: FC<DropdownButtonProps>;
 export default DropdownButton;
