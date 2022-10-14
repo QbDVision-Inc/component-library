@@ -7,16 +7,21 @@ import postcssNested from "postcss-nested";
 import postcssCustomProperties from "postcss-custom-properties";
 
 export default defineConfig(() => {
+  const isExternal = (id: string) =>
+    !id.startsWith(".") && !path.isAbsolute(id);
+
   return {
-    esbuild: {
-      minifyIdentifiers: false,
-    },
     build: {
+      minify: false,
+      sourcemap: true,
       lib: {
         entry: path.resolve(__dirname, "src/lib/index.ts"),
         name: "ComponentLibrary",
         formats: ["es", "umd"],
         fileName: (format) => `component-library.${format}.js`,
+      },
+      rollupOptions: {
+        external: isExternal,
       },
     },
     // @ts-ignore
