@@ -1,50 +1,51 @@
 import React, { FC } from "react";
+import c from "classnames";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { IconDefinition } from "@fortawesome/fontawesome-svg-core";
+import { IconProp } from "@fortawesome/fontawesome-svg-core";
 import { faFileLines } from "@fortawesome/free-solid-svg-icons";
 
-import classNames from "classnames";
 import style from "./IconButton.module.pcss";
-import buttonStyle from "../Button/Button.module.pcss";
+import Button from "../Button";
+import { Type } from "../Button/Button";
 
 type IconButtonProps = {
-  icon?: IconDefinition;
-  type?: "primary" | "secondary" | "tertiary";
+  icon?: IconProp;
+  iconSize?: string;
+  isCircle?: boolean;
+  type?: Type;
   onClick?: () => void;
-  disabled?: boolean;
+  isDisabled?: boolean;
 };
 
-const IconButton: FC<IconButtonProps> = ({
-  icon = faFileLines,
-  type = "primary",
-  onClick,
-  disabled,
-}) => {
+const IconButton: FC<IconButtonProps> = (
+  {
+    icon = faFileLines,
+    iconSize = "18px",
+    type = "primary",
+    onClick,
+    isCircle,
+    isDisabled,
+  },
+  ref
+) => {
   return (
     <div
-      className={classNames(buttonStyle.wrapper, {
-        [buttonStyle.wrapperDisabled]: disabled,
+      className={c(style.wrapper, {
+        [style.isCircle]: isCircle,
       })}
     >
-      <button
-        type="button"
-        className={classNames(
-          buttonStyle.button,
-          {
-            [buttonStyle.buttonPrimary]: type === "primary",
-            [buttonStyle.buttonSecondary]: type === "secondary",
-            [style.iconButtonTertiary]: type === "tertiary",
-            [buttonStyle.buttonDisabled]: disabled,
-          },
-          style.iconButton
-        )}
+      <Button
+        type={type}
         onClick={onClick}
-        disabled={disabled}
+        isDisabled={isDisabled}
+        ref={ref}
+        isFullWidth
       >
-        <FontAwesomeIcon icon={icon} fontSize="18px" />
-      </button>
+        <FontAwesomeIcon icon={icon} fontSize={iconSize} />
+      </Button>
     </div>
   );
 };
 
-export default IconButton;
+// @ts-ignore
+export default React.forwardRef(IconButton);
