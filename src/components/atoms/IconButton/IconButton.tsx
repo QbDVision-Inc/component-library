@@ -1,5 +1,5 @@
 import React, { FC } from "react";
-import classNames from "classnames";
+import c from "classnames";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { IconProp } from "@fortawesome/fontawesome-svg-core";
 import { faFileLines } from "@fortawesome/free-solid-svg-icons";
@@ -30,7 +30,7 @@ const IconButton: FC<IconButtonProps> = (
 ) => {
   return (
     <div
-      className={classNames(style.iconButton, {
+      className={c(style.wrapper, {
         [style.isCircle]: isCircle,
       })}
     >
@@ -38,8 +38,8 @@ const IconButton: FC<IconButtonProps> = (
         type={type}
         onClick={onClick}
         isDisabled={isDisabled}
-        isFullWidth
         ref={ref}
+        isFullWidth
       >
         <FontAwesomeIcon icon={icon} fontSize={iconSize} />
       </Button>

@@ -1,13 +1,13 @@
 .dropdown {
   display: inline-block;
 
-  & [type="button"]:hover, &:focus-within [type="button"] {
+  &.isIcon [type="button"]:hover,&.isIcon:focus-within [type="button"] {
     border: 1px solid var(--color-gray-medium);
     background-color: var(--color-gray-light);
     box-shadow: none;
   }
 
-  & [data-icon="ellipsis-vertical"] {
+  &.isIcon [data-icon="ellipsis-vertical"] {
     color: var(--color-gray-medium);
   }
 }

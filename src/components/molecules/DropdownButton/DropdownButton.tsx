@@ -1,6 +1,8 @@
 import React, { FC } from "react";
 
+import classNames from "classnames";
 import { Menu, MenuItem } from "@szhsin/react-menu";
+import { faEllipsisVertical } from "@fortawesome/free-solid-svg-icons";
 import Button from "../../atoms/Button";
 import { ButtonProps } from "../../atoms/Button/Button";
 import IconButton from "../../atoms/IconButton";
@@ -31,22 +33,22 @@ const DropdownButton: FC<DropdownButtonProps> = ({
   ...rest
 }) => {
   return (
-    <div className={style.dropdown}>
+    <div className={classNames([style.dropdown, { [style.isIcon]: isIcon }])}>
       <Menu
         className={style.menu}
         menuClassName={style.list}
         menuButton={
           isIcon ? (
-            <IconButton type="ghost" icon={faEllipsisVertical} {...rest} />
+            <IconButton icon={faEllipsisVertical} {...rest} type="ghost" />
           ) : (
             <Button {...rest} label={label} hasArrow />
           )
         }
       >
-        {options.map((item, index) => (
+        {options.map((item) => (
           <MenuItem
             className={style.item}
-            key={index}
+            key={item.key}
             value={item.key}
             disabled={item.disabled}
             onClick={onOptionsSelect}

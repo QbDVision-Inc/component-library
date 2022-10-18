@@ -1,8 +1,6 @@
 import Button from "./components/atoms/Button/Button";
 import ButtonGroup from "./components/molecules/ButtonGroup/ButtonGroup";
-import Link from "./components/atoms/Link";
 import { DropdownButton } from "./components";
-import { faAdd } from "@fortawesome/free-solid-svg-icons";
 
 const data = [
   {
@@ -29,7 +27,7 @@ function App() {
   return (
     <div style={{ textAlign: "center" }}>
       <DropdownButton
-        label={"xyz"}
+        label="xyz"
         options={data}
         onOptionsSelect={(e) => console.log(e.value)}
       />
@@ -37,14 +35,14 @@ function App() {
       <ButtonGroup>
         <Button label="Button 1" onClick={() => alert("111")} hasArrow />
         <Button
-          type={"secondary"}
+          type="secondary"
           label="Button 2"
           onClick={() => alert("222")}
         />
-        <Button label="Button 2" type={"ghost"} onClick={() => alert("222")} />
+        <Button label="Button 2" type="ghost" onClick={() => alert("222")} />
         <Button
           label="Button 3"
-          type={"secondary"}
+          type="secondary"
           onClick={() => alert("222")}
         />
       </ButtonGroup>
