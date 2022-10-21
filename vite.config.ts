@@ -11,9 +11,6 @@ export default defineConfig(() => {
     !id.startsWith(".") && !path.isAbsolute(id);
 
   return {
-    esbuild: {
-      minifyIdentifiers: false,
-    },
     build: {
       minify: false,
       sourcemap: true,
