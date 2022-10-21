@@ -524,7 +524,7 @@
           className: style$1.item,
           value: item2.key,
           disabled: item2.disabled,
-          onClick: onOptionsSelect,
+          onClick: (e) => onOptionsSelect(e.syntheticEvent),
           children: item2.value
         }, item2.key))
       })
