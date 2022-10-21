@@ -29,7 +29,7 @@ function App() {
       <DropdownButton
         label="xyz"
         options={data}
-        onOptionsSelect={(e) => console.log(e.value)}
+        onOptionsSelect={(e) => console.log(e)}
       />
       <br />
       <ButtonGroup>
