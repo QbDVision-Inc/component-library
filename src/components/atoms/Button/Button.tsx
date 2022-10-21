@@ -22,6 +22,7 @@ export type ButtonProps = {
   isLoading?: boolean;
   isSubmit?: boolean;
   isFullWidth?: boolean;
+  isFullHeight?: boolean;
   onClick?: (event?: any) => void;
   dataSet?: DOMStringMap;
   children?: ReactNode;
@@ -39,6 +40,7 @@ const Button: FC<ButtonProps> = (
     isLoading,
     isSubmit,
     isFullWidth,
+    isFullHeight,
     onClick,
     children,
     ...dataSet
@@ -55,7 +57,8 @@ const Button: FC<ButtonProps> = (
         style[`${size}`],
         { [style.disabled]: isDisabled },
         { [style.loading]: isLoading },
-        { [style.fullwidth]: isFullWidth }
+        { [style.fullWidth]: isFullWidth },
+        { [style.fullHeight]: isFullHeight }
       )}
       type={isSubmit ? "submit" : "button"}
       disabled={isDisabled}
