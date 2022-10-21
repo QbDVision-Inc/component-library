@@ -9,7 +9,6 @@ import IconButton from "../../atoms/IconButton";
 
 import "@szhsin/react-menu/dist/index.css";
 import style from "./DropdownButton.module.pcss";
-import { faEllipsisVertical } from "@fortawesome/free-solid-svg-icons";
 
 type option = {
   key: string;
@@ -51,7 +50,7 @@ const DropdownButton: FC<DropdownButtonProps> = ({
             key={item.key}
             value={item.key}
             disabled={item.disabled}
-            onClick={onOptionsSelect}
+            onClick={(e) => onOptionsSelect(e.syntheticEvent)}
           >
             {item.value}
           </MenuItem>
