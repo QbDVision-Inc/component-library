@@ -7,4 +7,6 @@ export { default as Spinner } from "../components/atoms/Spinner";
 export { default as ButtonGroup } from "../components/molecules/ButtonGroup";
 export { default as DropdownButton } from "../components/molecules/DropdownButton";
 export { default as NavBar } from "../components/molecules/NavBar";
+export { default as RecordHeader } from "../components/molecules/RecordHeader";
+// eslint-disable-next-line import/extensions
 export { default as designTokens } from "../../design-tokens.json";
