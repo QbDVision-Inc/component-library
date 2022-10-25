@@ -85,8 +85,12 @@
     opacity: 0;
   }
 
-.fullwidth___mFNZL {
+.fullWidth___8GO-B {
   width: 100%;
+}
+
+.fullHeight___KqYnw {
+  height: 100%;
 }
 
 .icon___m-HKy {
@@ -101,7 +105,7 @@
     margin: 0;
   }
 
-.tertiary___zqZhp {
+.ghost___CfQAc {
   border-color: #C0C6CC;
   color: #859099;
 }
@@ -110,17 +114,19 @@
     border-radius: 50%;
   }
 .link___Ey28k {
+  font-size: 14px;
   font-family: "Open Sans", Arial, sans-serif;
+  color: #434952;
+  font-weight: 400;
 }
 
   .link___Ey28k:link, .link___Ey28k:visited {
     position: relative;
-    font-size: 14px;
     color: #1F46A1;
     background: transparent;
     transition: .3s;
-    font-weight: 600;
     text-decoration: none;
+    font-weight: 600;
   }
 
   .link___Ey28k:link::after, .link___Ey28k:visited::after {
@@ -207,7 +213,68 @@
 .left-content___VwsNj {
   display: flex;
   align-content: center;
-}`)),document.head.appendChild(n)}}catch(o){console.error("vite-plugin-css-injected-by-js",o)}})();
+}
+.wrapper___GDopq {
+  display: inline-block;
+}
+
+  .wrapper--hasMargin___Btpj- {
+    margin-right: 11px;
+  }
+
+.separator___01qMZ {
+  margin: 0 5px;
+}
+@font-face {
+  font-family: old-stamper;
+  src: url("src/assets/fonts/old_stamper.ttf");
+}
+
+.RecordHeader___xaFog {
+  display: flex;
+  width: 100%;
+  padding: 21px 0;
+  align-items: baseline;
+}
+
+.hasMinusMargin___z4yBd {
+  margin-left: -26px;
+}
+
+.leftContent___DviK9 {
+  margin-right: auto;
+  margin-left: 12px;
+}
+
+.displayName___M66HY {
+  font-size: 24px;
+  font-weight: 700;
+  font-family: "Roboto", Arial, sans-serif;
+  margin: 0 0 4px 0;
+}
+
+.currentState___Kr-g3 {
+  font-family: "old-stamper", Arial, sans-serif;
+  color: #000000;
+  font-size: 24px;
+}
+
+.row___xz0ob {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.typeCode___XMBCp {
+  font-family: "Open Sans", Arial, sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.icon___CAI4Y {
+  color: #859099;
+  font-size: 16px;
+}`)),document.head.appendChild(n)}}catch(t){console.error("vite-plugin-css-injected-by-js",t)}})();
 (function(global, factory) {
   typeof exports === "object" && typeof module !== "undefined" ? factory(exports, require("react"), require("classnames"), require("react/jsx-runtime"), require("@fortawesome/react-fontawesome"), require("@fortawesome/free-solid-svg-icons"), require("@szhsin/react-menu"), require("@szhsin/react-menu/dist/index.css")) : typeof define === "function" && define.amd ? define(["exports", "react", "classnames", "react/jsx-runtime", "@fortawesome/react-fontawesome", "@fortawesome/free-solid-svg-icons", "@szhsin/react-menu", "@szhsin/react-menu/dist/index.css"], factory) : (global = typeof globalThis !== "undefined" ? globalThis : global || self, factory(global.ComponentLibrary = {}, global.React, global.c, global.jsxRuntime, global.reactFontawesome, global.freeSolidSvgIcons, global.reactMenu));
 })(this, function(exports2, React, c, jsxRuntime, reactFontawesome, freeSolidSvgIcons, reactMenu) {
@@ -267,6 +334,7 @@
       "--font-weight-regular": "400",
       "--font-weight-semi-bold": "600",
       "--font-weight-bold": "700",
+      "--font-family-oldStamper": '"old-stamper", Arial, sans-serif',
       "--font-family-openSans": '"Open Sans", Arial, sans-serif',
       "--font-family-TNR": '"TNR", Arial, sans-serif',
       "--font-family-Roboto": '"Roboto", Arial, sans-serif',
@@ -284,7 +352,7 @@
   };
   const spinner$1 = "spinner___T62Mn";
   const spin = "spin___On2jd";
-  const style$6 = {
+  const style$8 = {
     spinner: spinner$1,
     spin
   };
@@ -292,7 +360,7 @@
     color,
     size = 24
   }) => /* @__PURE__ */ jsxRuntime.jsxs("svg", {
-    className: style$6.spinner,
+    className: style$8.spinner,
     fill: color === "blue" ? tokens["custom-properties"]["--color-blue-primary"] : tokens["custom-properties"]["--color-white"],
     width: size,
     height: size,
@@ -317,26 +385,28 @@
   const button = "button___o4Lfp";
   const primary = "primary___pfqbx";
   const secondary = "secondary___pQL01";
-  const ghost = "ghost___TnsO6";
+  const ghost$1 = "ghost___TnsO6";
   const large = "large___zaoE3";
   const small = "small___dHbw9";
   const disabled = "disabled___2mTHA";
   const spinner = "spinner___k4QJT";
   const loading = "loading___GEpQi";
-  const fullwidth = "fullwidth___mFNZL";
-  const icon = "icon___m-HKy";
-  const style$5 = {
+  const fullWidth = "fullWidth___8GO-B";
+  const fullHeight = "fullHeight___KqYnw";
+  const icon$1 = "icon___m-HKy";
+  const style$7 = {
     button,
     primary,
     secondary,
-    ghost,
+    ghost: ghost$1,
     large,
     small,
     disabled,
     spinner,
     loading,
-    fullwidth,
-    icon
+    fullWidth,
+    fullHeight,
+    icon: icon$1
   };
   const Button = ({
     id,
@@ -349,6 +419,7 @@
     isLoading,
     isSubmit,
     isFullWidth,
+    isFullHeight,
     onClick,
     children,
     ...dataSet
@@ -356,12 +427,14 @@
     return /* @__PURE__ */ jsxRuntime.jsxs("button", {
       ...dataSet,
       id,
-      className: c__default.default(style$5.button, style$5[`${type}`], style$5[`${size}`], {
-        [style$5.disabled]: isDisabled
+      className: c__default.default(style$7.button, style$7[`${type}`], style$7[`${size}`], {
+        [style$7.disabled]: isDisabled
       }, {
-        [style$5.loading]: isLoading
+        [style$7.loading]: isLoading
       }, {
-        [style$5.fullwidth]: isFullWidth
+        [style$7.fullWidth]: isFullWidth
+      }, {
+        [style$7.fullHeight]: isFullHeight
       }),
       type: isSubmit ? "submit" : "button",
       disabled: isDisabled,
@@ -371,14 +444,14 @@
       children: [children || /* @__PURE__ */ jsxRuntime.jsx("span", {
         children: label
       }), isLoading && /* @__PURE__ */ jsxRuntime.jsx("div", {
-        className: style$5.spinner,
+        className: style$7.spinner,
         children: /* @__PURE__ */ jsxRuntime.jsx(Spinner, {
           ...type !== "primary" && {
             color: "blue"
           }
         })
       }), hasArrow && /* @__PURE__ */ jsxRuntime.jsx(reactFontawesome.FontAwesomeIcon, {
-        className: style$5.icon,
+        className: style$7.icon,
         style: {
           marginLeft: "10px"
         },
@@ -388,12 +461,12 @@
     });
   };
   const Button$1 = React.forwardRef(Button);
-  const wrapper = "wrapper___HNzWL";
-  const tertiary = "tertiary___zqZhp";
+  const wrapper$1 = "wrapper___HNzWL";
+  const ghost = "ghost___CfQAc";
   const isCircle = "isCircle___o1G-u";
-  const style$4 = {
-    wrapper,
-    tertiary,
+  const style$6 = {
+    wrapper: wrapper$1,
+    ghost,
     isCircle
   };
   const IconButton = ({
@@ -405,8 +478,8 @@
     isDisabled
   }, ref) => {
     return /* @__PURE__ */ jsxRuntime.jsx("div", {
-      className: c__default.default(style$4.wrapper, {
-        [style$4.isCircle]: isCircle2
+      className: c__default.default(style$6.wrapper, {
+        [style$6.isCircle]: isCircle2
       }),
       children: /* @__PURE__ */ jsxRuntime.jsx(Button$1, {
         type,
@@ -424,7 +497,7 @@
   const IconButton$1 = React__default.default.forwardRef(IconButton);
   const link = "link___Ey28k";
   const linkDisabled = "link-disabled___Hk7Kr";
-  const style$3 = {
+  const style$5 = {
     link,
     "link-disabled": "link-disabled___Hk7Kr",
     linkDisabled
@@ -439,8 +512,8 @@
   }) => /* @__PURE__ */ jsxRuntime.jsxs("a", {
     id,
     href: isDisabled ? "#" : href,
-    className: c__default.default(style$3.link, {
-      [style$3.linkDisabled]: isDisabled
+    className: c__default.default(style$5.link, {
+      [style$5.linkDisabled]: isDisabled
     }),
     title,
     rel: "noopener noreferrer",
@@ -448,7 +521,7 @@
       target: "_blank"
     },
     children: [/* @__PURE__ */ jsxRuntime.jsx("span", {
-      className: style$3.label,
+      className: style$5.label,
       children: label
     }), isExternal && /* @__PURE__ */ jsxRuntime.jsx(reactFontawesome.FontAwesomeIcon, {
       icon: freeSolidSvgIcons.faArrowUpRightFromSquare
@@ -475,14 +548,14 @@
     alt: "QbDVision Logo"
   });
   const buttonGroup = "button-group___zQdnW";
-  const style$2 = {
+  const style$4 = {
     "button-group": "button-group___zQdnW",
     buttonGroup
   };
   const ButtonGroup = ({
     children
   }) => /* @__PURE__ */ jsxRuntime.jsx("div", {
-    className: style$2.buttonGroup,
+    className: style$4.buttonGroup,
     children
   });
   const dropdown = "dropdown___PscgQ";
@@ -490,7 +563,7 @@
   const menu = "menu___RcKEp";
   const list = "list___KTdJj";
   const item = "item___uCZSI";
-  const style$1 = {
+  const style$3 = {
     dropdown,
     isIcon,
     menu,
@@ -505,12 +578,12 @@
     ...rest
   }) => {
     return /* @__PURE__ */ jsxRuntime.jsx("div", {
-      className: c__default.default([style$1.dropdown, {
-        [style$1.isIcon]: isIcon2
+      className: c__default.default([style$3.dropdown, {
+        [style$3.isIcon]: isIcon2
       }]),
       children: /* @__PURE__ */ jsxRuntime.jsx(reactMenu.Menu, {
-        className: style$1.menu,
-        menuClassName: style$1.list,
+        className: style$3.menu,
+        menuClassName: style$3.list,
         menuButton: isIcon2 ? /* @__PURE__ */ jsxRuntime.jsx(IconButton$1, {
           icon: freeSolidSvgIcons.faEllipsisVertical,
           ...rest,
@@ -521,7 +594,7 @@
           hasArrow: true
         }),
         children: options.map((item2) => /* @__PURE__ */ jsxRuntime.jsx(reactMenu.MenuItem, {
-          className: style$1.item,
+          className: style$3.item,
           value: item2.key,
           disabled: item2.disabled,
           onClick: (e) => onOptionsSelect(e.syntheticEvent),
@@ -534,8 +607,8 @@
   const navBar = "NavBar___vkkwh";
   const breadcrumbContent = "breadcrumb-content___JnGq8";
   const logoContent = "Logo-content___uGsez";
-  const leftContent = "left-content___VwsNj";
-  const style = {
+  const leftContent$1 = "left-content___VwsNj";
+  const style$2 = {
     NavBar: NavBar$1,
     navBar,
     "breadcrumb-content": "breadcrumb-content___JnGq8",
@@ -543,21 +616,105 @@
     "Logo-content": "Logo-content___uGsez",
     logoContent,
     "left-content": "left-content___VwsNj",
-    leftContent
+    leftContent: leftContent$1
   };
   const NavBar = () => /* @__PURE__ */ jsxRuntime.jsxs("header", {
-    className: style.NavBar,
+    className: style$2.NavBar,
     children: [/* @__PURE__ */ jsxRuntime.jsxs("div", {
-      className: style.leftContent,
+      className: style$2.leftContent,
       children: [/* @__PURE__ */ jsxRuntime.jsx(Logo, {}), /* @__PURE__ */ jsxRuntime.jsx("div", {
-        className: style.breadcrumbContent,
+        className: style$2.breadcrumbContent,
         children: "All Projects / PRJ-4 - Drug Substance Project"
       })]
     }), /* @__PURE__ */ jsxRuntime.jsx("div", {
-      className: style.rightContent,
+      className: style$2.rightContent,
       children: "Rockets R US"
     })]
   });
+  const wrapper = "wrapper___GDopq";
+  const wrapperHasMargin = "wrapper--hasMargin___Btpj-";
+  const separator = "separator___01qMZ";
+  const style$1 = {
+    wrapper,
+    "wrapper--hasMargin": "wrapper--hasMargin___Btpj-",
+    wrapperHasMargin,
+    separator
+  };
+  const Breadcrumb = ({
+    links,
+    hasSeparator
+  }) => {
+    return /* @__PURE__ */ jsxRuntime.jsx(jsxRuntime.Fragment, {
+      children: links.map((item2, index) => /* @__PURE__ */ jsxRuntime.jsxs("div", {
+        className: c__default.default(style$1.wrapper, {
+          [style$1.wrapperHasMargin]: !hasSeparator
+        }),
+        children: [index !== 0 && hasSeparator && /* @__PURE__ */ jsxRuntime.jsx("span", {
+          children: " / "
+        }), /* @__PURE__ */ jsxRuntime.jsx(Link, {
+          href: item2.url,
+          label: item2.label
+        })]
+      }, item2.label + item2.url))
+    });
+  };
+  const RecordHeader$1 = "RecordHeader___xaFog";
+  const recordHeader = "RecordHeader___xaFog";
+  const hasMinusMargin = "hasMinusMargin___z4yBd";
+  const leftContent = "leftContent___DviK9";
+  const displayName = "displayName___M66HY";
+  const currentState = "currentState___Kr-g3";
+  const row = "row___xz0ob";
+  const typeCode = "typeCode___XMBCp";
+  const icon = "icon___CAI4Y";
+  const style = {
+    RecordHeader: RecordHeader$1,
+    recordHeader,
+    hasMinusMargin,
+    leftContent,
+    displayName,
+    currentState,
+    row,
+    typeCode,
+    icon
+  };
+  const RecordHeader = ({
+    title,
+    currentState: currentState2,
+    breadcrumb,
+    label,
+    backButtonLink
+  }) => {
+    return /* @__PURE__ */ jsxRuntime.jsxs("div", {
+      className: c__default.default(style.RecordHeader, {
+        [style.hasMinusMargin]: backButtonLink
+      }),
+      children: [backButtonLink && /* @__PURE__ */ jsxRuntime.jsx("a", {
+        href: backButtonLink,
+        children: /* @__PURE__ */ jsxRuntime.jsx(reactFontawesome.FontAwesomeIcon, {
+          className: style.icon,
+          icon: freeSolidSvgIcons.faArrowLeft
+        })
+      }), /* @__PURE__ */ jsxRuntime.jsxs("div", {
+        className: style.leftContent,
+        children: [/* @__PURE__ */ jsxRuntime.jsxs("div", {
+          className: style.row,
+          children: [/* @__PURE__ */ jsxRuntime.jsx("h3", {
+            className: style.displayName,
+            children: title
+          }), label && /* @__PURE__ */ jsxRuntime.jsx("span", {
+            className: style.label,
+            children: label
+          })]
+        }), (breadcrumb == null ? void 0 : breadcrumb.length) && /* @__PURE__ */ jsxRuntime.jsx(Breadcrumb, {
+          links: breadcrumb
+        })]
+      }), currentState2 && /* @__PURE__ */ jsxRuntime.jsx("div", {
+        className: style.currentState,
+        children: currentState2
+      })]
+    });
+  };
   exports2.Button = Button$1;
   exports2.ButtonGroup = ButtonGroup;
   exports2.DropdownButton = DropdownButton;
@@ -565,6 +722,7 @@
   exports2.Link = Link;
   exports2.Logo = Logo;
   exports2.NavBar = NavBar;
+  exports2.RecordHeader = RecordHeader;
   exports2.Spinner = Spinner;
   exports2.designTokens = tokens;
   Object.defineProperties(exports2, { __esModule: { value: true }, [Symbol.toStringTag]: { value: "Module" } });

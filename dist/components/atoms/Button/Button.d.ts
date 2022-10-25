@@ -12,6 +12,7 @@ export declare type ButtonProps = {
     isLoading?: boolean;
     isSubmit?: boolean;
     isFullWidth?: boolean;
+    isFullHeight?: boolean;
     onClick?: (event?: any) => void;
     dataSet?: DOMStringMap;
     children?: ReactNode;
