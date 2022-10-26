@@ -1,0 +1,50 @@
+@font-face {
+  font-family: old-stamper;
+  src: url("src/assets/fonts/old_stamper.ttf");
+}
+
+.RecordHeader {
+  display: flex;
+  width: 100%;
+  padding: 21px 0;
+  align-items: baseline;
+}
+
+.hasMinusMargin {
+  margin-left: -26px;
+}
+
+.leftContent {
+  margin-right: auto;
+  margin-left: 12px;
+}
+
+.displayName {
+  font-size: var(--font-size-24);
+  font-weight: 700;
+  font-family: var(--font-family-Roboto);
+  margin: 0 0 4px 0;
+}
+
+.currentState {
+  font-family: var(--font-family-oldStamper);
+  color: var(--color-black-primary);
+  font-size: var(--font-size-24);
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.typeCode {
+  font-family: var(--font-family-openSans);
+  font-size: var(--font-size-12);
+  font-weight: var(--font-weight-regular);
+}
+
+.icon {
+  color: var(--color-gray-medium);
+  font-size: var(--font-size-16);
+}
