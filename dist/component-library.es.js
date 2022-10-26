@@ -223,7 +223,9 @@
   }
 
 .separator___01qMZ {
+  display: inline-block;
   margin: 0 5px;
+  font-weight: 700;
 }
 @font-face {
   font-family: old-stamper;
@@ -265,7 +267,7 @@
   gap: 8px;
 }
 
-.typeCode___XMBCp {
+.label___apHtK {
   font-family: "Open Sans", Arial, sans-serif;
   font-size: 12px;
   font-weight: 400;
@@ -410,7 +412,7 @@ const style$7 = {
 };
 const Button = ({
   id,
-  label = "Button",
+  label: label2 = "Button",
   type = "primary",
   size = "large",
   hasArrow,
@@ -442,7 +444,7 @@ const Button = ({
     ref,
     onClick,
     children: [children || /* @__PURE__ */ jsx("span", {
-      children: label
+      children: label2
     }), isLoading && /* @__PURE__ */ jsx("div", {
       className: style$7.spinner,
       children: /* @__PURE__ */ jsx(Spinner, {
@@ -504,7 +506,7 @@ const style$5 = {
 };
 const Link = ({
   id,
-  label,
+  label: label2,
   href,
   isExternal,
   title,
@@ -522,7 +524,7 @@ const Link = ({
   },
   children: [/* @__PURE__ */ jsx("span", {
     className: style$5.label,
-    children: label
+    children: label2
   }), isExternal && /* @__PURE__ */ jsx(FontAwesomeIcon, {
     icon: faArrowUpRightFromSquare
   })]
@@ -571,7 +573,7 @@ const style$3 = {
   item
 };
 const DropdownButton = ({
-  label,
+  label: label2,
   options,
   onOptionsSelect,
   isIcon: isIcon2,
@@ -590,7 +592,7 @@ const DropdownButton = ({
         type: "ghost"
       }) : /* @__PURE__ */ jsx(Button$1, {
         ...rest,
-        label,
+        label: label2,
         hasArrow: true
       }),
       children: options.map((item2) => /* @__PURE__ */ jsx(MenuItem, {
@@ -650,6 +652,7 @@ const Breadcrumb = ({
         [style$1.wrapperHasMargin]: !hasSeparator
       }),
       children: [index !== 0 && hasSeparator && /* @__PURE__ */ jsx("span", {
+        className: style$1.separator,
         children: " / "
       }), /* @__PURE__ */ jsx(Link, {
         href: item2.url,
@@ -665,7 +668,7 @@ const leftContent = "leftContent___DviK9";
 const displayName = "displayName___M66HY";
 const currentState = "currentState___Kr-g3";
 const row = "row___xz0ob";
-const typeCode = "typeCode___XMBCp";
+const label = "label___apHtK";
 const icon = "icon___CAI4Y";
 const style = {
   RecordHeader: RecordHeader$1,
@@ -675,14 +678,14 @@ const style = {
   displayName,
   currentState,
   row,
-  typeCode,
+  label,
   icon
 };
 const RecordHeader = ({
   title,
   currentState: currentState2,
   breadcrumb,
-  label,
+  label: label2,
   backButtonLink
 }) => {
   return /* @__PURE__ */ jsxs("div", {
@@ -702,9 +705,9 @@ const RecordHeader = ({
         children: [/* @__PURE__ */ jsx("h3", {
           className: style.displayName,
           children: title
-        }), label && /* @__PURE__ */ jsx("span", {
+        }), label2 && /* @__PURE__ */ jsx("span", {
           className: style.label,
-          children: label
+          children: label2
         })]
       }), (breadcrumb == null ? void 0 : breadcrumb.length) && /* @__PURE__ */ jsx(Breadcrumb, {
         links: breadcrumb
@@ -716,6 +719,7 @@ const RecordHeader = ({
   });
 };
 export {
+  Breadcrumb,
   Button$1 as Button,
   ButtonGroup,
   DropdownButton,
