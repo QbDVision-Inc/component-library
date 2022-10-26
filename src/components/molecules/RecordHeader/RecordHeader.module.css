@@ -38,7 +38,7 @@
   gap: 8px;
 }
 
-.typeCode {
+.label {
   font-family: var(--font-family-openSans);
   font-size: var(--font-size-12);
   font-weight: var(--font-weight-regular);

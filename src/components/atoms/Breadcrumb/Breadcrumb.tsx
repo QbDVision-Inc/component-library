@@ -21,7 +21,9 @@ const Breadcrumb: FC<BreadcrumbProps> = ({ links, hasSeparator }) => {
             [style.wrapperHasMargin]: !hasSeparator,
           })}
         >
-          {index !== 0 && hasSeparator && <span>{" / "}</span>}
+          {index !== 0 && hasSeparator && (
+            <span className={style.separator}>{" / "}</span>
+          )}
           <Link href={item.url} label={item.label} />
         </div>
       ))}

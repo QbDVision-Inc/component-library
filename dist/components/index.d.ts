@@ -7,4 +7,5 @@ export { default as ButtonGroup } from "../components/molecules/ButtonGroup";
 export { default as DropdownButton } from "../components/molecules/DropdownButton";
 export { default as NavBar } from "../components/molecules/NavBar";
 export { default as RecordHeader } from "../components/molecules/RecordHeader";
+export { default as Breadcrumb } from "../components/atoms/Breadcrumb";
 export { default as designTokens } from "../../design-tokens.json";

@@ -223,7 +223,9 @@
   }
 
 .separator___01qMZ {
+  display: inline-block;
   margin: 0 5px;
+  font-weight: 700;
 }
 @font-face {
   font-family: old-stamper;
@@ -265,7 +267,7 @@
   gap: 8px;
 }
 
-.typeCode___XMBCp {
+.label___apHtK {
   font-family: "Open Sans", Arial, sans-serif;
   font-size: 12px;
   font-weight: 400;
@@ -410,7 +412,7 @@
   };
   const Button = ({
     id,
-    label = "Button",
+    label: label2 = "Button",
     type = "primary",
     size = "large",
     hasArrow,
@@ -442,7 +444,7 @@
       ref,
       onClick,
       children: [children || /* @__PURE__ */ jsxRuntime.jsx("span", {
-        children: label
+        children: label2
       }), isLoading && /* @__PURE__ */ jsxRuntime.jsx("div", {
         className: style$7.spinner,
         children: /* @__PURE__ */ jsxRuntime.jsx(Spinner, {
@@ -504,7 +506,7 @@
   };
   const Link = ({
     id,
-    label,
+    label: label2,
     href,
     isExternal,
     title,
@@ -522,7 +524,7 @@
     },
     children: [/* @__PURE__ */ jsxRuntime.jsx("span", {
       className: style$5.label,
-      children: label
+      children: label2
     }), isExternal && /* @__PURE__ */ jsxRuntime.jsx(reactFontawesome.FontAwesomeIcon, {
       icon: freeSolidSvgIcons.faArrowUpRightFromSquare
     })]
@@ -571,7 +573,7 @@
     item
   };
   const DropdownButton = ({
-    label,
+    label: label2,
     options,
     onOptionsSelect,
     isIcon: isIcon2,
@@ -590,7 +592,7 @@
           type: "ghost"
         }) : /* @__PURE__ */ jsxRuntime.jsx(Button$1, {
           ...rest,
-          label,
+          label: label2,
           hasArrow: true
         }),
         children: options.map((item2) => /* @__PURE__ */ jsxRuntime.jsx(reactMenu.MenuItem, {
@@ -650,6 +652,7 @@
           [style$1.wrapperHasMargin]: !hasSeparator
         }),
         children: [index !== 0 && hasSeparator && /* @__PURE__ */ jsxRuntime.jsx("span", {
+          className: style$1.separator,
           children: " / "
         }), /* @__PURE__ */ jsxRuntime.jsx(Link, {
           href: item2.url,
@@ -665,7 +668,7 @@
   const displayName = "displayName___M66HY";
   const currentState = "currentState___Kr-g3";
   const row = "row___xz0ob";
-  const typeCode = "typeCode___XMBCp";
+  const label = "label___apHtK";
   const icon = "icon___CAI4Y";
   const style = {
     RecordHeader: RecordHeader$1,
@@ -675,14 +678,14 @@
     displayName,
     currentState,
     row,
-    typeCode,
+    label,
     icon
   };
   const RecordHeader = ({
     title,
     currentState: currentState2,
     breadcrumb,
-    label,
+    label: label2,
     backButtonLink
   }) => {
     return /* @__PURE__ */ jsxRuntime.jsxs("div", {
@@ -702,9 +705,9 @@
           children: [/* @__PURE__ */ jsxRuntime.jsx("h3", {
             className: style.displayName,
             children: title
-          }), label && /* @__PURE__ */ jsxRuntime.jsx("span", {
+          }), label2 && /* @__PURE__ */ jsxRuntime.jsx("span", {
             className: style.label,
-            children: label
+            children: label2
           })]
         }), (breadcrumb == null ? void 0 : breadcrumb.length) && /* @__PURE__ */ jsxRuntime.jsx(Breadcrumb, {
           links: breadcrumb
@@ -715,6 +718,7 @@
       })]
     });
   };
+  exports2.Breadcrumb = Breadcrumb;
   exports2.Button = Button$1;
   exports2.ButtonGroup = ButtonGroup;
   exports2.DropdownButton = DropdownButton;
