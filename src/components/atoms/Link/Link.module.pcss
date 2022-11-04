@@ -1,4 +1,5 @@
 .link {
+  position: relative;
   font-size: 14px;
   font-family: var(--font-family-openSans);
   color: var(--color-gray-dark);
@@ -19,7 +20,7 @@
   }
 
   &:hover:not(&-disabled), &:active:not(&-disabled) {
-    &::after {
+    &:link::after, &:visited::after {
       content: "";
       position: absolute;
       bottom: -2px;

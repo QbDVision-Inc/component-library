@@ -22,13 +22,9 @@ const RecordHeader: FC<RecordHeaderProps> = ({
   backButtonLink,
 }) => {
   return (
-    <div
-      className={c(style.RecordHeader, {
-        [style.hasMinusMargin]: backButtonLink,
-      })}
-    >
+    <div className={style.RecordHeader}>
       {backButtonLink && (
-        <a href={backButtonLink}>
+        <a href={backButtonLink} className={style.iconContent}>
           <FontAwesomeIcon className={style.icon} icon={faArrowLeft} />
         </a>
       )}
