@@ -9,6 +9,7 @@
   width: 100%;
   padding: 21px 0;
   align-items: baseline;
+  gap: 30px;
 }
 
 .leftContent {
@@ -28,16 +29,12 @@
   font-size: var(--font-size-24);
 }
 
-.row {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-
 .label {
   font-family: var(--font-family-openSans);
   font-size: var(--font-size-12);
   font-weight: var(--font-weight-regular);
+  flex-shrink: 0;
+  margin-left: 8px;
 }
 
 .iconContent {

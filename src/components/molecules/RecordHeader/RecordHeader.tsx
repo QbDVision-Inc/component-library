@@ -29,10 +29,9 @@ const RecordHeader: FC<RecordHeaderProps> = ({
         </a>
       )}
       <div className={style.leftContent}>
-        <div className={style.row}>
-          <h3 className={style.displayName}>{title}</h3>
-          {label && <span className={style.label}>{label}</span>}
-        </div>
+        <h3 className={style.displayName}>
+          {title} {label && <span className={style.label}>{label}</span>}
+        </h3>
         {breadcrumb?.length && <Breadcrumb links={breadcrumb} />}
       </div>
       {currentState && <div className={style.currentState}>{currentState}</div>}
