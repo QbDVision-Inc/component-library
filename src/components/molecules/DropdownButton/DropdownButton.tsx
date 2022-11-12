@@ -12,12 +12,13 @@ import style from "./DropdownButton.module.pcss";
 
 type option = {
   key: string;
-  disabled: boolean;
+  disabled?: boolean;
   value: string;
 };
 
 interface DropdownButtonProps
   extends Omit<ButtonProps, "onClick" | "onKeyDown"> {
+  id?: string;
   label: string;
   options: option[];
   onOptionsSelect: (e: any) => void;
@@ -25,6 +26,7 @@ interface DropdownButtonProps
 }
 
 const DropdownButton: FC<DropdownButtonProps> = ({
+  id,
   label,
   options,
   onOptionsSelect,
@@ -46,6 +48,7 @@ const DropdownButton: FC<DropdownButtonProps> = ({
       >
         {options.map((item) => (
           <MenuItem
+            {...(id && { id: `${id}_${item.key}` })}
             className={style.item}
             key={item.key}
             value={item.key}
