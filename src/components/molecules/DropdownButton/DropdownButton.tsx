@@ -42,7 +42,7 @@ const DropdownButton: FC<DropdownButtonProps> = ({
           isIcon ? (
             <IconButton icon={faEllipsisVertical} {...rest} type="ghost" />
           ) : (
-            <Button {...rest} label={label} hasArrow />
+            <Button {...rest} id={id} label={label} hasArrow />
           )
         }
       >
