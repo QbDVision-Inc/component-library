@@ -9,6 +9,7 @@ import Button from "../Button";
 import { Type } from "../Button/Button";
 
 type IconButtonProps = {
+  id?: string;
   icon?: IconProp;
   iconSize?: string;
   isCircle?: boolean;
@@ -19,6 +20,7 @@ type IconButtonProps = {
 
 const IconButton: FC<IconButtonProps> = (
   {
+    id,
     icon = faFileLines,
     iconSize = "18px",
     type = "primary",
@@ -35,6 +37,7 @@ const IconButton: FC<IconButtonProps> = (
       })}
     >
       <Button
+        id={id}
         type={type}
         onClick={onClick}
         isDisabled={isDisabled}
