@@ -40,9 +40,19 @@ const DropdownButton: FC<DropdownButtonProps> = ({
         menuClassName={style.list}
         menuButton={
           isIcon ? (
-            <IconButton icon={faEllipsisVertical} {...rest} type="ghost" />
+            <IconButton
+              icon={faEllipsisVertical}
+              id={`${id}DropdownButton`}
+              type="ghost"
+              {...rest}
+            />
           ) : (
-            <Button {...rest} id={id} label={label} hasArrow />
+            <Button
+              id={`${id}DropdownButton`}
+              label={label}
+              hasArrow
+              {...rest}
+            />
           )
         }
       >
