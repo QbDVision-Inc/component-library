@@ -472,6 +472,7 @@ const style$6 = {
   isCircle
 };
 const IconButton = ({
+  id,
   icon: icon2 = faFileLines,
   iconSize = "18px",
   type = "primary",
@@ -484,6 +485,7 @@ const IconButton = ({
       [style$6.isCircle]: isCircle2
     }),
     children: /* @__PURE__ */ jsx(Button$1, {
+      id,
       type,
       onClick,
       isDisabled,
@@ -589,13 +591,14 @@ const DropdownButton = ({
       menuClassName: style$3.list,
       menuButton: isIcon2 ? /* @__PURE__ */ jsx(IconButton$1, {
         icon: faEllipsisVertical,
-        ...rest,
-        type: "ghost"
+        id: `${id}DropdownButton`,
+        type: "ghost",
+        ...rest
       }) : /* @__PURE__ */ jsx(Button$1, {
-        ...rest,
-        id,
+        id: `${id}DropdownButton`,
         label: label2,
-        hasArrow: true
+        hasArrow: true,
+        ...rest
       }),
       children: options.map((item2) => /* @__PURE__ */ createElement(MenuItem, {
         ...id && {

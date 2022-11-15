@@ -2,6 +2,7 @@ import React from "react";
 import { IconProp } from "@fortawesome/fontawesome-svg-core";
 import { Type } from "../Button/Button";
 declare type IconButtonProps = {
+    id?: string;
     icon?: IconProp;
     iconSize?: string;
     isCircle?: boolean;
