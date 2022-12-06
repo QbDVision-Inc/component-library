@@ -8,6 +8,7 @@ declare type RecordHeaderProps = {
     currentState?: string;
     label?: string;
     backButtonLink?: string;
+    isTitleGray?: boolean;
 };
 declare const RecordHeader: FC<RecordHeaderProps>;
 export default RecordHeader;

@@ -4,19 +4,41 @@
 }
 
 .RecordHeader {
+  position: sticky;
   display: flex;
-  width: 100%;
+  min-width: 100%;
   padding: 21px 0;
   align-items: baseline;
+  top: 0;
+  z-index: 1;
+  justify-content: center;
+  margin-left: -15px;
+  margin-right: -15px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    background: var(--color-gray-light);
+    height: 100%;
+    width: 100vw;
+    top: 0;
+    z-index: -1;
+    border-bottom: 1px solid var(--color-gray-mild);
+   }
 }
 
-.hasMinusMargin {
-  margin-left: -26px;
+.isGray {
+  color: var(--color-gray-medium)
+}
+
+.backButtonLink {
+  position: absolute;
+  margin-top: 7px;
+  left: -30px;
 }
 
 .leftContent {
   margin-right: auto;
-  margin-left: 12px;
 }
 
 .displayName {

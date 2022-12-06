@@ -232,48 +232,70 @@
   src: url("src/assets/fonts/old_stamper.ttf");
 }
 
-.RecordHeader___xaFog {
+.RecordHeader___WjOtW {
+  position: sticky;
   display: flex;
-  width: 100%;
+  min-width: 100%;
   padding: 21px 0;
   align-items: baseline;
+  top: 0;
+  z-index: 1;
+  justify-content: center;
+  margin-left: -15px;
+  margin-right: -15px;
 }
 
-.hasMinusMargin___z4yBd {
-  margin-left: -26px;
+.RecordHeader___WjOtW::before {
+    content: "";
+    position: absolute;
+    background: #F0F3F5;
+    height: 100%;
+    width: 100vw;
+    top: 0;
+    z-index: -1;
+    border-bottom: 1px solid #C0C6CC;
+   }
+
+.isGray___PR13C {
+  color: #859099
 }
 
-.leftContent___DviK9 {
+.backButtonLink___YY41- {
+  position: absolute;
+  margin-top: 7px;
+  left: -30px;
+}
+
+.leftContent___LpPqV {
   margin-right: auto;
-  margin-left: 12px;
 }
 
-.displayName___M66HY {
+.displayName___gY-Cx {
   font-size: 24px;
   font-weight: 700;
   font-family: "Roboto", Arial, sans-serif;
   margin: 0 0 4px 0;
 }
 
-.currentState___Kr-g3 {
+.currentState___--fM4 {
   font-family: "old-stamper", Arial, sans-serif;
   color: #000000;
   font-size: 24px;
 }
 
-.row___xz0ob {
+.row___5C8g- {
   display: flex;
   align-items: center;
   gap: 8px;
 }
 
-.label___apHtK {
+.label___-dltC {
   font-family: "Open Sans", Arial, sans-serif;
   font-size: 12px;
   font-weight: 400;
 }
 
-.icon___CAI4Y {
+.icon___e-vFL {
   color: #859099;
   font-size: 16px;
 }`)),document.head.appendChild(n)}}catch(t){console.error("vite-plugin-css-injected-by-js",t)}})();
@@ -669,19 +691,21 @@
       }, item2.label + item2.url))
     });
   };
-  const RecordHeader$1 = "RecordHeader___xaFog";
-  const recordHeader = "RecordHeader___xaFog";
-  const hasMinusMargin = "hasMinusMargin___z4yBd";
-  const leftContent = "leftContent___DviK9";
-  const displayName = "displayName___M66HY";
-  const currentState = "currentState___Kr-g3";
-  const row = "row___xz0ob";
-  const label = "label___apHtK";
-  const icon = "icon___CAI4Y";
+  const RecordHeader$1 = "RecordHeader___WjOtW";
+  const recordHeader = "RecordHeader___WjOtW";
+  const isGray = "isGray___PR13C";
+  const backButtonLink = "backButtonLink___YY41-";
+  const leftContent = "leftContent___LpPqV";
+  const displayName = "displayName___gY-Cx";
+  const currentState = "currentState___--fM4";
+  const row = "row___5C8g-";
+  const label = "label___-dltC";
+  const icon = "icon___e-vFL";
   const style = {
     RecordHeader: RecordHeader$1,
     recordHeader,
-    hasMinusMargin,
+    isGray,
+    backButtonLink,
     leftContent,
     displayName,
     currentState,
@@ -694,14 +718,14 @@
     currentState: currentState2,
     breadcrumb,
     label: label2,
-    backButtonLink
+    backButtonLink: backButtonLink2,
+    isTitleGray
   }) => {
     return /* @__PURE__ */ jsxRuntime.jsxs("div", {
-      className: c__default.default(style.RecordHeader, {
-        [style.hasMinusMargin]: backButtonLink
-      }),
-      children: [backButtonLink && /* @__PURE__ */ jsxRuntime.jsx("a", {
-        href: backButtonLink,
+      className: style.RecordHeader,
+      children: [backButtonLink2 && /* @__PURE__ */ jsxRuntime.jsx("a", {
+        href: backButtonLink2,
+        className: style.backButtonLink,
         children: /* @__PURE__ */ jsxRuntime.jsx(reactFontawesome.FontAwesomeIcon, {
           className: style.icon,
           icon: freeSolidSvgIcons.faArrowLeft
@@ -711,7 +735,9 @@
         children: [/* @__PURE__ */ jsxRuntime.jsxs("div", {
           className: style.row,
           children: [/* @__PURE__ */ jsxRuntime.jsx("h3", {
-            className: style.displayName,
+            className: c__default.default(style.displayName, {
+              [style.isGray]: isTitleGray
+            }),
             children: title
           }), label2 && /* @__PURE__ */ jsxRuntime.jsx("span", {
             className: style.label,
