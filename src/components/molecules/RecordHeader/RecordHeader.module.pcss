@@ -33,8 +33,19 @@
 
 .backButtonLink {
   position: absolute;
-  margin-top: 7px;
-  left: -30px;
+  padding: 5px 8px;
+  left: -38px;
+  border: 1px solid transparent;
+  border-radius: 3px;
+  transition: all .3s;
+
+  &:hover {
+    border-color: var(--color-gray-mild);
+  }
+
+  & svg {
+    margin: 0;
+  }
 }
 
 .leftContent {

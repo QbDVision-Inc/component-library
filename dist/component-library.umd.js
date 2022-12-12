@@ -118,6 +118,7 @@
   font-family: "Open Sans", Arial, sans-serif;
   color: #434952;
   font-weight: 400;
+  text-decoration: none;
 }
 
   .link___Ey28k:link, .link___Ey28k:visited {
@@ -144,6 +145,16 @@
       height: 1px;
       background: #1F46A1;
       text-decoration: underline;
+    }
+
+  .link___Ey28k:hover:not([href]) {
+    text-decoration: none;
+    color: #434952;
+    cursor: default;
+  }
+
+  .link___Ey28k:hover:not([href])::after {
+      display: none;
     }
 
   .link-disabled___Hk7Kr {
@@ -262,9 +273,20 @@
 
 .backButtonLink___YY41- {
   position: absolute;
-  margin-top: 7px;
-  left: -30px;
+  padding: 5px 8px;
+  left: -38px;
+  border: 1px solid transparent;
+  border-radius: 3px;
+  transition: all .3s;
 }
+
+.backButtonLink___YY41-:hover {
+    border-color: #C0C6CC;
+  }
+
+.backButtonLink___YY41- svg {
+    margin: 0;
+  }
 
 .leftContent___LpPqV {
   margin-right: auto;
@@ -298,7 +320,7 @@
 .icon___e-vFL {
   color: #859099;
   font-size: 16px;
-}`)),document.head.appendChild(n)}}catch(t){console.error("vite-plugin-css-injected-by-js",t)}})();
+}`)),document.head.appendChild(n)}}catch(o){console.error("vite-plugin-css-injected-by-js",o)}})();
 (function(global, factory) {
   typeof exports === "object" && typeof module !== "undefined" ? factory(exports, require("react"), require("classnames"), require("react/jsx-runtime"), require("@fortawesome/react-fontawesome"), require("@fortawesome/free-solid-svg-icons"), require("@szhsin/react-menu"), require("@szhsin/react-menu/dist/index.css")) : typeof define === "function" && define.amd ? define(["exports", "react", "classnames", "react/jsx-runtime", "@fortawesome/react-fontawesome", "@fortawesome/free-solid-svg-icons", "@szhsin/react-menu", "@szhsin/react-menu/dist/index.css"], factory) : (global = typeof globalThis !== "undefined" ? globalThis : global || self, factory(global.ComponentLibrary = {}, global.React, global.c, global.jsxRuntime, global.reactFontawesome, global.freeSolidSvgIcons, global.reactMenu));
 })(this, function(exports2, React, c, jsxRuntime, reactFontawesome, freeSolidSvgIcons, reactMenu) {
