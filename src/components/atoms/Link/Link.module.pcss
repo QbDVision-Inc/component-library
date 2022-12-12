@@ -3,6 +3,7 @@
   font-family: var(--font-family-openSans);
   color: var(--color-gray-dark);
   font-weight: var(--font-weight-regular);
+  text-decoration: none;
 
   &:link, &:visited {
     position: relative;
@@ -29,6 +30,16 @@
       height: 1px;
       background: var(--color-blue-primary);
       text-decoration: underline;
+    }
+  }
+
+  &:hover:not([href]) {
+    text-decoration: none;
+    color: var(--color-gray-dark);
+    cursor: default;
+
+    &::after {
+      display: none;
     }
   }
 
