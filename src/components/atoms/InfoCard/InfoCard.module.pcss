@@ -1,0 +1,76 @@
+.InfoCard{
+  border-top: 4px solid var(--color-blue-accent);
+  height: 314px;
+  margin-top: 15px;
+  min-width: 155px;
+  border-radius: 4px;
+  box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 15%);
+  background-color: var(--color-white);
+  cursor: pointer;
+  font-family: var(--font-family-openSans);
+  transition: var(--transition-timing);
+
+  &:hover {
+    background-color: #f0f3f5;
+  }
+
+  & * {
+    box-sizing: border-box;
+  }
+}
+
+.icon {
+  height: 49px;
+  margin-top: 31px;
+  margin-left: 27px;
+  width: 46px;
+}
+
+.title {
+  font-size: 18px;
+  height: 48px;
+  margin-left: 24px;
+  width: 123px;
+  font-weight: var(--font-weight-semi-bold);
+  color: var(--color-blue-primary);
+}
+
+.count {
+  font-size: 48px;
+  font-family: 'Roboto', sans-serif;
+  height: 57px;
+  margin-top: 16px;
+  margin-left: 24px;
+  width: 54px;
+}
+
+.line {
+  border: solid thin var(--color-gray-mild);
+  height: 1px;
+  margin-top: 20px;
+  margin-left: 19px;
+  margin-right: 19px;
+}
+
+.detailsLine {
+  margin-top: 11px;
+  margin-left: 19px;
+  margin-right: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.detailsLineTitle {
+  font-size: 12px;
+  height: 17px;
+  letter-spacing: 0;
+  margin-right: 10px;
+}
+
+.detailsLineValue {
+  display: inline-block;
+  font-size: 16px;
+  font-weight: 600;
+  height: 22px;
+}

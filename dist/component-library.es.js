@@ -166,6 +166,82 @@
   .link___Ey28k svg {
     margin-left: 10px;
   }
+.InfoCard___2OPaP{
+  border-top: 4px solid #1FBCFF;
+  height: 314px;
+  margin-top: 15px;
+  min-width: 155px;
+  border-radius: 4px;
+  box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 15%);
+  background-color: #FFFFFF;
+  cursor: pointer;
+  font-family: "Open Sans", Arial, sans-serif;
+  transition: .3s;
+}
+
+  .InfoCard___2OPaP:hover {
+    background-color: #f0f3f5;
+  }
+
+  .InfoCard___2OPaP * {
+    box-sizing: border-box;
+  }
+
+.icon___U2spx {
+  height: 49px;
+  margin-top: 31px;
+  margin-left: 27px;
+  width: 46px;
+}
+
+.title___9jkjA {
+  font-size: 18px;
+  height: 48px;
+  margin-left: 24px;
+  width: 123px;
+  font-weight: 600;
+  color: #1F46A1;
+}
+
+.count___tWK-D {
+  font-size: 48px;
+  font-family: 'Roboto', sans-serif;
+  height: 57px;
+  margin-top: 16px;
+  margin-left: 24px;
+  width: 54px;
+}
+
+.line___WdF0p {
+  border: solid thin #C0C6CC;
+  height: 1px;
+  margin-top: 20px;
+  margin-left: 19px;
+  margin-right: 19px;
+}
+
+.detailsLine___2datd {
+  margin-top: 11px;
+  margin-left: 19px;
+  margin-right: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.detailsLineTitle___JXsMx {
+  font-size: 12px;
+  height: 17px;
+  letter-spacing: 0;
+  margin-right: 10px;
+}
+
+.detailsLineValue___RfGUh {
+  display: inline-block;
+  font-size: 16px;
+  font-weight: 600;
+  height: 22px;
+}
 .button-group___zQdnW {
   display: flex;
   margin-right: -1px;
@@ -320,7 +396,7 @@
 .icon___e-vFL {
   color: #859099;
   font-size: 16px;
-}`)),document.head.appendChild(n)}}catch(o){console.error("vite-plugin-css-injected-by-js",o)}})();
+}`)),document.head.appendChild(n)}}catch(t){console.error("vite-plugin-css-injected-by-js",t)}})();
 import React, { forwardRef, createElement } from "react";
 import c from "classnames";
 import { jsxs, jsx, Fragment } from "react/jsx-runtime";
@@ -398,7 +474,7 @@ const tokens = {
 };
 const spinner$1 = "spinner___T62Mn";
 const spin = "spin___On2jd";
-const style$8 = {
+const style$9 = {
   spinner: spinner$1,
   spin
 };
@@ -406,7 +482,7 @@ const Spinner = ({
   color,
   size = 24
 }) => /* @__PURE__ */ jsxs("svg", {
-  className: style$8.spinner,
+  className: style$9.spinner,
   fill: color === "blue" ? tokens["custom-properties"]["--color-blue-primary"] : tokens["custom-properties"]["--color-white"],
   width: size,
   height: size,
@@ -439,8 +515,8 @@ const spinner = "spinner___k4QJT";
 const loading = "loading___GEpQi";
 const fullWidth = "fullWidth___8GO-B";
 const fullHeight = "fullHeight___KqYnw";
-const icon$1 = "icon___m-HKy";
-const style$7 = {
+const icon$2 = "icon___m-HKy";
+const style$8 = {
   button,
   primary,
   secondary,
@@ -452,7 +528,7 @@ const style$7 = {
   loading,
   fullWidth,
   fullHeight,
-  icon: icon$1
+  icon: icon$2
 };
 const Button = ({
   id,
@@ -460,7 +536,7 @@ const Button = ({
   type = "primary",
   size = "large",
   hasArrow,
-  title,
+  title: title2,
   isDisabled,
   isLoading,
   isSubmit,
@@ -473,31 +549,31 @@ const Button = ({
   return /* @__PURE__ */ jsxs("button", {
     ...dataSet,
     id,
-    className: c(style$7.button, style$7[`${type}`], style$7[`${size}`], {
-      [style$7.disabled]: isDisabled
+    className: c(style$8.button, style$8[`${type}`], style$8[`${size}`], {
+      [style$8.disabled]: isDisabled
     }, {
-      [style$7.loading]: isLoading
+      [style$8.loading]: isLoading
     }, {
-      [style$7.fullWidth]: isFullWidth
+      [style$8.fullWidth]: isFullWidth
     }, {
-      [style$7.fullHeight]: isFullHeight
+      [style$8.fullHeight]: isFullHeight
     }),
     type: isSubmit ? "submit" : "button",
     disabled: isDisabled,
-    title,
+    title: title2,
     ref,
     onClick,
     children: [children || /* @__PURE__ */ jsx("span", {
       children: label2
     }), isLoading && /* @__PURE__ */ jsx("div", {
-      className: style$7.spinner,
+      className: style$8.spinner,
       children: /* @__PURE__ */ jsx(Spinner, {
         ...type !== "primary" && {
           color: "blue"
         }
       })
     }), hasArrow && /* @__PURE__ */ jsx(FontAwesomeIcon, {
-      className: style$7.icon,
+      className: style$8.icon,
       style: {
         marginLeft: "10px"
       },
@@ -510,7 +586,7 @@ const Button$1 = forwardRef(Button);
 const wrapper$1 = "wrapper___HNzWL";
 const ghost = "ghost___CfQAc";
 const isCircle = "isCircle___o1G-u";
-const style$6 = {
+const style$7 = {
   wrapper: wrapper$1,
   ghost,
   isCircle
@@ -525,8 +601,8 @@ const IconButton = ({
   isDisabled
 }, ref) => {
   return /* @__PURE__ */ jsx("div", {
-    className: c(style$6.wrapper, {
-      [style$6.isCircle]: isCircle2
+    className: c(style$7.wrapper, {
+      [style$7.isCircle]: isCircle2
     }),
     children: /* @__PURE__ */ jsx(Button$1, {
       id,
@@ -545,7 +621,7 @@ const IconButton = ({
 const IconButton$1 = React.forwardRef(IconButton);
 const link = "link___Ey28k";
 const linkDisabled = "link-disabled___Hk7Kr";
-const style$5 = {
+const style$6 = {
   link,
   "link-disabled": "link-disabled___Hk7Kr",
   linkDisabled
@@ -555,21 +631,21 @@ const Link = ({
   label: label2,
   href,
   isExternal,
-  title,
+  title: title2,
   isDisabled
 }) => /* @__PURE__ */ jsxs("a", {
   id,
   href: isDisabled ? "#" : href,
-  className: c(style$5.link, {
-    [style$5.linkDisabled]: isDisabled
+  className: c(style$6.link, {
+    [style$6.linkDisabled]: isDisabled
   }),
-  title,
+  title: title2,
   rel: "noopener noreferrer",
   ...isExternal && {
     target: "_blank"
   },
   children: [/* @__PURE__ */ jsx("span", {
-    className: style$5.label,
+    className: style$6.label,
     children: label2
   }), isExternal && /* @__PURE__ */ jsx(FontAwesomeIcon, {
     icon: faArrowUpRightFromSquare
@@ -595,6 +671,82 @@ const Logo = ({
   src: type === "dark" ? darkLogo : logo,
   alt: "QbDVision Logo"
 });
+const addCommasToNumber = (number) => {
+  return number && Number(number).toLocaleString();
+};
+const InfoCard$1 = "InfoCard___2OPaP";
+const infoCard = "InfoCard___2OPaP";
+const icon$1 = "icon___U2spx";
+const title = "title___9jkjA";
+const count = "count___tWK-D";
+const line = "line___WdF0p";
+const detailsLine = "detailsLine___2datd";
+const detailsLineTitle = "detailsLineTitle___JXsMx";
+const detailsLineValue = "detailsLineValue___RfGUh";
+const style$5 = {
+  InfoCard: InfoCard$1,
+  infoCard,
+  icon: icon$1,
+  title,
+  count,
+  line,
+  detailsLine,
+  detailsLineTitle,
+  detailsLineValue
+};
+const InfoCard = ({
+  id,
+  icon: icon2,
+  alt,
+  data,
+  onInfoCardClick,
+  isLoading
+}) => {
+  var _a, _b, _c;
+  return /* @__PURE__ */ jsxs("article", {
+    id: `${id}InfoCard`,
+    className: style$5.infoCard,
+    role: "presentation",
+    onClick: onInfoCardClick,
+    children: [/* @__PURE__ */ jsx("div", {
+      children: /* @__PURE__ */ jsx("img", {
+        src: icon2,
+        className: style$5.icon,
+        alt
+      })
+    }), /* @__PURE__ */ jsx("div", {
+      className: c(style$5.count, {
+        skeleton: isLoading
+      }),
+      children: addCommasToNumber((_a = data == null ? void 0 : data.count) == null ? void 0 : _a.value)
+    }), /* @__PURE__ */ jsx("div", {
+      className: style$5.title,
+      children: /* @__PURE__ */ jsx("a", {
+        id: `${id}Link`,
+        onClick: onInfoCardClick,
+        children: (_b = data == null ? void 0 : data.count) == null ? void 0 : _b.title
+      })
+    }), /* @__PURE__ */ jsx("div", {
+      className: style$5.line
+    }), (_c = data == null ? void 0 : data.stats) == null ? void 0 : _c.map((instance) => {
+      return /* @__PURE__ */ jsxs("div", {
+        role: "presentation",
+        id: instance.id,
+        className: style$5.detailsLine,
+        onClick: instance.onClick,
+        children: [/* @__PURE__ */ jsx("div", {
+          className: style$5.detailsLineTitle,
+          children: instance.title
+        }), /* @__PURE__ */ jsx("div", {
+          className: c(style$5.detailsLineValue, {
+            skeleton: isLoading
+          }),
+          children: addCommasToNumber(instance.count)
+        })]
+      }, instance.id);
+    })]
+  });
+};
 const buttonGroup = "button-group___zQdnW";
 const style$4 = {
   "button-group": "button-group___zQdnW",
@@ -736,7 +888,7 @@ const style = {
   icon
 };
 const RecordHeader = ({
-  title,
+  title: title2,
   currentState: currentState2,
   breadcrumb,
   label: label2,
@@ -760,7 +912,7 @@ const RecordHeader = ({
           className: c(style.displayName, {
             [style.isGray]: isTitleGray
           }),
-          children: title
+          children: title2
         }), label2 && /* @__PURE__ */ jsx("span", {
           className: style.label,
           children: label2
@@ -780,6 +932,7 @@ export {
   ButtonGroup,
   DropdownButton,
   IconButton$1 as IconButton,
+  InfoCard,
   Link,
   Logo,
   NavBar,
