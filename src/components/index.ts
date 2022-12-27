@@ -10,5 +10,6 @@ export { default as DropdownButton } from "../components/molecules/DropdownButto
 export { default as NavBar } from "../components/molecules/NavBar";
 export { default as RecordHeader } from "../components/molecules/RecordHeader";
 export { default as Breadcrumb } from "../components/atoms/Breadcrumb";
+export { default as QuickAccessCard } from "../components/atoms/QuickAccessCard";
 // eslint-disable-next-line import/extensions
 export { default as designTokens } from "../../design-tokens.json";
