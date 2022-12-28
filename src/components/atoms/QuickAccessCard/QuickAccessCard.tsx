@@ -2,11 +2,7 @@ import React, { BaseSyntheticEvent, FC } from "react";
 import c from "classnames";
 
 import Card from "../Card";
-import {
-  addCommasToNumber,
-  convertToCamelCaseId,
-  pluralize,
-} from "../../../utils";
+import { addCommasToNumber, convertToCamelCaseId } from "../../../utils";
 
 import style from "./QuickAccessCard.module.pcss";
 
@@ -36,8 +32,10 @@ const QuickAccessCard: FC<QuickAccessCardProps> = ({
     event.stopPropagation();
     window.open(object.url, "_self");
   };
+  const pluralizedTitle =
+    object.title.at(-1) !== "s" ? `${object.title}s` : object.title;
 
-  const generateID = `${convertToCamelCaseId(pluralize(object.title))}Link`;
+  const generateID = `${convertToCamelCaseId(pluralizedTitle)}Link`;
 
   return (
     <Card withHoverEffect>
