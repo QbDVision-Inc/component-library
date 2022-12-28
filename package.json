@@ -1,6 +1,6 @@
 {
   "name": "@qbdvision-inc/component-library",
-  "version": "0.0.79",
+  "version": "0.0.80",
   "type": "module",
   "scripts": {
     "dev": "vite",
