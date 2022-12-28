@@ -1,6 +1,7 @@
 import React, { BaseSyntheticEvent, FC } from "react";
 import c from "classnames";
 
+import Card from "../Card";
 import { addCommasToNumber, convertToCamelCaseId } from "../../../utils";
 
 import style from "./QuickAccessCard.module.pcss";
@@ -35,41 +36,38 @@ const QuickAccessCard: FC<QuickAccessCardProps> = ({
   const generateID = `${convertToCamelCaseId(object.title)}Link`;
 
   return (
-    <div
-      onClick={handleQuickAccessCardClick}
-      className={`${style.quickAccessCard} ${className || ""}`}
-    >
-      <div>
-        <div className={c(style.quickAccessCardTitle, { skeleton: isLoading })}>
-          {addCommasToNumber(object.count)}
-        </div>
-        <div className={style.quickAccessCardDetails}>
-          <a
-            id={generateID}
-            onClick={handleQuickAccessCardClick}
-            href={object.url}
+    <Card withHoverEffect>
+      <div
+        className={`${style.quickAccessCard} ${className || ""}`}
+        onClick={handleQuickAccessCardClick}
+      >
+        <div>
+          <div
+            className={c(style.quickAccessCardTitle, { skeleton: isLoading })}
           >
-            {object.title}
-          </a>
+            {addCommasToNumber(object.count)}
+          </div>
+          <div className={style.quickAccessCardDetails}>
+            <a
+              id={generateID}
+              onClick={handleQuickAccessCardClick}
+              href={object.url}
+            >
+              {object.title}
+            </a>
+          </div>
+        </div>
+        <div>
+          <img
+            src={object.icon.image}
+            width={object.icon.width}
+            height={object.icon.height}
+            alt={object.title}
+          />
         </div>
       </div>
-      <div>
-        <img
-          src={object.icon.image}
-          width={object.icon.width}
-          height={object.icon.height}
-          alt={object.title}
-        />
-      </div>
-    </div>
+    </Card>
   );
 };
 
 export default QuickAccessCard;
-
-/*
- * TODO
- * [] Create empty card with (shadow, border radius, hover effect) and use it in InfoCard & QuickAccessCard
- * [] use variables in css
- * [] remove unused QuickAccessCard widget from qbd + unused css styles
- * */

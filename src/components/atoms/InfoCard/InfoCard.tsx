@@ -1,6 +1,7 @@
 import React, { FC } from "react";
 import c from "classnames";
 
+import Card from "../Card";
 import { addCommasToNumber } from "../../../utils";
 
 import style from "./InfoCard.module.pcss";
@@ -26,41 +27,45 @@ const InfoCard: FC<InfoCardProps> = ({
   isLoading,
 }) => {
   return (
-    <article
-      id={`${id}InfoCard`}
-      className={style.infoCard}
-      role="presentation"
-      onClick={onInfoCardClick}
-    >
-      <div>
-        <img src={icon} className={style.icon} alt={alt} />
-      </div>
-      <div className={c(style.count, { skeleton: isLoading })}>
-        {addCommasToNumber(data?.count?.value)}
-      </div>
-      <div className={style.title}>
-        <a id={`${id}Link`} onClick={onInfoCardClick}>
-          {data?.count?.title}
-        </a>
-      </div>
-      <div className={style.line} />
-      {data?.stats?.map((instance) => {
-        return (
-          <div
-            role="presentation"
-            key={instance.id}
-            id={instance.id}
-            className={style.detailsLine}
-            onClick={instance.onClick}
-          >
-            <div className={style.detailsLineTitle}>{instance.title}</div>
-            <div className={c(style.detailsLineValue, { skeleton: isLoading })}>
-              {addCommasToNumber(instance.count)}
+    <Card>
+      <div
+        id={`${id}InfoCard`}
+        className={style.infoCard}
+        role="presentation"
+        onClick={onInfoCardClick}
+      >
+        <div>
+          <img src={icon} className={style.icon} alt={alt} />
+        </div>
+        <div className={c(style.count, { skeleton: isLoading })}>
+          {addCommasToNumber(data?.count?.value)}
+        </div>
+        <div className={style.title}>
+          <a id={`${id}Link`} onClick={onInfoCardClick}>
+            {data?.count?.title}
+          </a>
+        </div>
+        <div className={style.line} />
+        {data?.stats?.map((instance) => {
+          return (
+            <div
+              role="presentation"
+              key={instance.id}
+              id={instance.id}
+              className={style.detailsLine}
+              onClick={instance.onClick}
+            >
+              <div className={style.detailsLineTitle}>{instance.title}</div>
+              <div
+                className={c(style.detailsLineValue, { skeleton: isLoading })}
+              >
+                {addCommasToNumber(instance.count)}
+              </div>
             </div>
-          </div>
-        );
-      })}
-    </article>
+          );
+        })}
+      </div>
+    </Card>
   );
 };
 

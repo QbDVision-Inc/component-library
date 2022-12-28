@@ -1,0 +1,18 @@
+.card {
+  border-radius: var(--radius-4);
+  background-color: var(--color-white);
+  box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 15%);
+  transition: var(--transition-timing);
+
+  & * {
+    box-sizing: border-box;
+  }
+
+  &.withHoverEffect {
+    cursor: pointer;
+
+    &:hover {
+      background-color: var(--color-gray-light);
+    }
+  }
+}

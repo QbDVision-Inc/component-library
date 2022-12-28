@@ -166,82 +166,24 @@
   .link___Ey28k svg {
     margin-left: 10px;
   }
-.InfoCard___2OPaP{
-  border-top: 4px solid #1FBCFF;
-  height: 314px;
-  margin-top: 15px;
-  min-width: 155px;
+.card___Tv0v- {
   border-radius: 4px;
-  box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 15%);
   background-color: #FFFFFF;
-  font-family: "Open Sans", Arial, sans-serif;
+  box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 15%);
   transition: .3s;
-  cursor: pointer;
 }
 
-  .InfoCard___2OPaP:hover {
-    background-color: #F0F3F5;
-  }
-
-  .InfoCard___2OPaP * {
+  .card___Tv0v- * {
     box-sizing: border-box;
   }
 
-.icon___U2spx {
-  height: 49px;
-  margin-top: 31px;
-  margin-left: 27px;
-  width: 46px;
-}
+  .card___Tv0v-.withHoverEffect___n7-60 {
+    cursor: pointer;
+  }
 
-.title___9jkjA {
-  font-size: 18px;
-  height: 48px;
-  margin-left: 24px;
-  width: 123px;
-  font-weight: 600;
-  color: #1F46A1;
-}
-
-.count___tWK-D {
-  font-size: 48px;
-  font-family: 'Roboto', sans-serif;
-  height: 57px;
-  margin-top: 16px;
-  margin-left: 24px;
-  width: 54px;
-}
-
-.line___WdF0p {
-  border: solid thin #C0C6CC;
-  height: 1px;
-  margin-top: 20px;
-  margin-left: 19px;
-  margin-right: 19px;
-}
-
-.detailsLine___2datd {
-  margin-top: 11px;
-  margin-left: 19px;
-  margin-right: 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.detailsLineTitle___JXsMx {
-  font-size: 12px;
-  height: 17px;
-  letter-spacing: 0;
-  margin-right: 10px;
-}
-
-.detailsLineValue___RfGUh {
-  display: inline-block;
-  font-size: 16px;
-  font-weight: 600;
-  height: 22px;
-}
+  .card___Tv0v-.withHoverEffect___n7-60:hover {
+      background-color: #F0F3F5;
+    }
 .button-group___zQdnW {
   display: flex;
   margin-right: -1px;
@@ -397,6 +339,69 @@
   color: #859099;
   font-size: 16px;
 }
+.InfoCard___2OPaP{
+  border-top: 4px solid #1FBCFF;
+  height: 314px;
+  margin-top: 15px;
+  min-width: 155px;
+  font-family: "Open Sans", Arial, sans-serif;
+}
+
+.icon___U2spx {
+  height: 49px;
+  margin-top: 31px;
+  margin-left: 27px;
+  width: 46px;
+}
+
+.title___9jkjA {
+  font-size: 18px;
+  height: 48px;
+  margin-left: 24px;
+  width: 123px;
+  font-weight: 600;
+  color: #1F46A1;
+}
+
+.count___tWK-D {
+  font-size: 48px;
+  font-family: 'Roboto', sans-serif;
+  height: 57px;
+  margin-top: 16px;
+  margin-left: 24px;
+  width: 54px;
+}
+
+.line___WdF0p {
+  border: solid thin #C0C6CC;
+  height: 1px;
+  margin-top: 20px;
+  margin-left: 19px;
+  margin-right: 19px;
+}
+
+.detailsLine___2datd {
+  margin-top: 11px;
+  margin-left: 19px;
+  margin-right: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.detailsLineTitle___JXsMx {
+  font-size: 12px;
+  height: 17px;
+  letter-spacing: 0;
+  margin-right: 10px;
+}
+
+.detailsLineValue___RfGUh {
+  display: inline-block;
+  font-size: 16px;
+  font-weight: 600;
+  height: 22px;
+}
 .quickAccessCard___-jS20 {
   align-items: center;
   display: flex;
@@ -405,20 +410,7 @@
   justify-content: space-around;
   margin-top: 15px;
   min-width: 250px;
-  cursor: pointer;
-  border-radius: 4px;
-  background-color: #FFFFFF;
-  box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 15%);
-  transition: .3s;
 }
-
-  .quickAccessCard___-jS20:hover {
-    background-color: #F0F3F5;
-  }
-
-  .quickAccessCard___-jS20 * {
-    box-sizing: border-box;
-  }
 
 .quickAccessCardTitle___Lb6IV {
   font-family: "Roboto", Arial, sans-serif;
@@ -434,7 +426,7 @@
     text-decoration: none;
     font-family: "Open Sans", Arial, sans-serif;
     color: #1F46A1;
-  }`)),document.head.appendChild(n)}}catch(i){console.error("vite-plugin-css-injected-by-js",i)}})();
+  }`)),document.head.appendChild(n)}}catch(t){console.error("vite-plugin-css-injected-by-js",t)}})();
 import React, { forwardRef, createElement } from "react";
 import c from "classnames";
 import { jsxs, jsx, Fragment } from "react/jsx-runtime";
@@ -512,7 +504,7 @@ const tokens = {
 };
 const spinner$1 = "spinner___T62Mn";
 const spin = "spin___On2jd";
-const style$a = {
+const style$b = {
   spinner: spinner$1,
   spin
 };
@@ -520,7 +512,7 @@ const Spinner = ({
   color,
   size = 24
 }) => /* @__PURE__ */ jsxs("svg", {
-  className: style$a.spinner,
+  className: style$b.spinner,
   fill: color === "blue" ? tokens["custom-properties"]["--color-blue-primary"] : tokens["custom-properties"]["--color-white"],
   width: size,
   height: size,
@@ -554,7 +546,7 @@ const loading = "loading___GEpQi";
 const fullWidth = "fullWidth___8GO-B";
 const fullHeight = "fullHeight___KqYnw";
 const icon$2 = "icon___m-HKy";
-const style$9 = {
+const style$a = {
   button,
   primary,
   secondary,
@@ -587,14 +579,14 @@ const Button = ({
   return /* @__PURE__ */ jsxs("button", {
     ...dataSet,
     id,
-    className: c(style$9.button, style$9[`${type}`], style$9[`${size}`], {
-      [style$9.disabled]: isDisabled
+    className: c(style$a.button, style$a[`${type}`], style$a[`${size}`], {
+      [style$a.disabled]: isDisabled
     }, {
-      [style$9.loading]: isLoading
+      [style$a.loading]: isLoading
     }, {
-      [style$9.fullWidth]: isFullWidth
+      [style$a.fullWidth]: isFullWidth
     }, {
-      [style$9.fullHeight]: isFullHeight
+      [style$a.fullHeight]: isFullHeight
     }),
     type: isSubmit ? "submit" : "button",
     disabled: isDisabled,
@@ -604,14 +596,14 @@ const Button = ({
     children: [children || /* @__PURE__ */ jsx("span", {
       children: label2
     }), isLoading && /* @__PURE__ */ jsx("div", {
-      className: style$9.spinner,
+      className: style$a.spinner,
       children: /* @__PURE__ */ jsx(Spinner, {
         ...type !== "primary" && {
           color: "blue"
         }
       })
     }), hasArrow && /* @__PURE__ */ jsx(FontAwesomeIcon, {
-      className: style$9.icon,
+      className: style$a.icon,
       style: {
         marginLeft: "10px"
       },
@@ -624,7 +616,7 @@ const Button$1 = forwardRef(Button);
 const wrapper$1 = "wrapper___HNzWL";
 const ghost = "ghost___CfQAc";
 const isCircle = "isCircle___o1G-u";
-const style$8 = {
+const style$9 = {
   wrapper: wrapper$1,
   ghost,
   isCircle
@@ -639,8 +631,8 @@ const IconButton = ({
   isDisabled
 }, ref) => {
   return /* @__PURE__ */ jsx("div", {
-    className: c(style$8.wrapper, {
-      [style$8.isCircle]: isCircle2
+    className: c(style$9.wrapper, {
+      [style$9.isCircle]: isCircle2
     }),
     children: /* @__PURE__ */ jsx(Button$1, {
       id,
@@ -659,7 +651,7 @@ const IconButton = ({
 const IconButton$1 = React.forwardRef(IconButton);
 const link = "link___Ey28k";
 const linkDisabled = "link-disabled___Hk7Kr";
-const style$7 = {
+const style$8 = {
   link,
   "link-disabled": "link-disabled___Hk7Kr",
   linkDisabled
@@ -674,8 +666,8 @@ const Link = ({
 }) => /* @__PURE__ */ jsxs("a", {
   id,
   href: isDisabled ? "#" : href,
-  className: c(style$7.link, {
-    [style$7.linkDisabled]: isDisabled
+  className: c(style$8.link, {
+    [style$8.linkDisabled]: isDisabled
   }),
   title: title2,
   rel: "noopener noreferrer",
@@ -683,7 +675,7 @@ const Link = ({
     target: "_blank"
   },
   children: [/* @__PURE__ */ jsx("span", {
-    className: style$7.label,
+    className: style$8.label,
     children: label2
   }), isExternal && /* @__PURE__ */ jsx(FontAwesomeIcon, {
     icon: faArrowUpRightFromSquare
@@ -709,6 +701,202 @@ const Logo = ({
   src: type === "dark" ? darkLogo : logo,
   alt: "QbDVision Logo"
 });
+const card = "card___Tv0v-";
+const withHoverEffect = "withHoverEffect___n7-60";
+const style$7 = {
+  card,
+  withHoverEffect
+};
+const Card = ({
+  withHoverEffect: withHoverEffect2,
+  children
+}) => {
+  return /* @__PURE__ */ jsx("article", {
+    className: c(style$7.card, {
+      [style$7.withHoverEffect]: withHoverEffect2
+    }),
+    children
+  });
+};
+const buttonGroup = "button-group___zQdnW";
+const style$6 = {
+  "button-group": "button-group___zQdnW",
+  buttonGroup
+};
+const ButtonGroup = ({
+  children
+}) => /* @__PURE__ */ jsx("div", {
+  className: style$6.buttonGroup,
+  children
+});
+const dropdown = "dropdown___PscgQ";
+const isIcon = "isIcon___RptAc";
+const menu = "menu___RcKEp";
+const list = "list___KTdJj";
+const item = "item___uCZSI";
+const style$5 = {
+  dropdown,
+  isIcon,
+  menu,
+  list,
+  item
+};
+const DropdownButton = ({
+  id,
+  label: label2,
+  options,
+  onOptionsSelect,
+  isIcon: isIcon2,
+  ...rest
+}) => {
+  return /* @__PURE__ */ jsx("div", {
+    className: c([style$5.dropdown, {
+      [style$5.isIcon]: isIcon2
+    }]),
+    children: /* @__PURE__ */ jsx(Menu, {
+      className: style$5.menu,
+      menuClassName: style$5.list,
+      menuButton: isIcon2 ? /* @__PURE__ */ jsx(IconButton$1, {
+        icon: faEllipsisVertical,
+        id: `${id}DropdownButton`,
+        type: "ghost",
+        ...rest
+      }) : /* @__PURE__ */ jsx(Button$1, {
+        id: `${id}DropdownButton`,
+        label: label2,
+        hasArrow: true,
+        ...rest
+      }),
+      children: options.map((item2) => /* @__PURE__ */ createElement(MenuItem, {
+        ...id && {
+          id: `${id}_${item2.key}`
+        },
+        className: style$5.item,
+        key: item2.key,
+        value: item2.key,
+        disabled: item2.disabled,
+        onClick: (e) => onOptionsSelect(e.syntheticEvent)
+      }, item2.value))
+    })
+  });
+};
+const NavBar$1 = "NavBar___vkkwh";
+const navBar = "NavBar___vkkwh";
+const breadcrumbContent = "breadcrumb-content___JnGq8";
+const logoContent = "Logo-content___uGsez";
+const leftContent$1 = "left-content___VwsNj";
+const style$4 = {
+  NavBar: NavBar$1,
+  navBar,
+  "breadcrumb-content": "breadcrumb-content___JnGq8",
+  breadcrumbContent,
+  "Logo-content": "Logo-content___uGsez",
+  logoContent,
+  "left-content": "left-content___VwsNj",
+  leftContent: leftContent$1
+};
+const NavBar = () => /* @__PURE__ */ jsxs("header", {
+  className: style$4.NavBar,
+  children: [/* @__PURE__ */ jsxs("div", {
+    className: style$4.leftContent,
+    children: [/* @__PURE__ */ jsx(Logo, {}), /* @__PURE__ */ jsx("div", {
+      className: style$4.breadcrumbContent,
+      children: "All Projects / PRJ-4 - Drug Substance Project"
+    })]
+  }), /* @__PURE__ */ jsx("div", {
+    className: style$4.rightContent,
+    children: "Rockets R US"
+  })]
+});
+const wrapper = "wrapper___GDopq";
+const wrapperHasMargin = "wrapper--hasMargin___Btpj-";
+const separator = "separator___01qMZ";
+const style$3 = {
+  wrapper,
+  "wrapper--hasMargin": "wrapper--hasMargin___Btpj-",
+  wrapperHasMargin,
+  separator
+};
+const Breadcrumb = ({
+  links,
+  hasSeparator
+}) => {
+  return /* @__PURE__ */ jsx(Fragment, {
+    children: links.map((item2, index) => /* @__PURE__ */ jsxs("div", {
+      className: c(style$3.wrapper, {
+        [style$3.wrapperHasMargin]: !hasSeparator
+      }),
+      children: [index !== 0 && hasSeparator && /* @__PURE__ */ jsx("span", {
+        className: style$3.separator,
+        children: " / "
+      }), /* @__PURE__ */ jsx(Link, {
+        href: item2.url,
+        label: item2.label
+      })]
+    }, item2.label + item2.url))
+  });
+};
+const RecordHeader$1 = "RecordHeader___WjOtW";
+const recordHeader = "RecordHeader___WjOtW";
+const isGray = "isGray___PR13C";
+const backButtonLink = "backButtonLink___YY41-";
+const leftContent = "leftContent___LpPqV";
+const displayName = "displayName___gY-Cx";
+const currentState = "currentState___--fM4";
+const row = "row___5C8g-";
+const label = "label___-dltC";
+const icon$1 = "icon___e-vFL";
+const style$2 = {
+  RecordHeader: RecordHeader$1,
+  recordHeader,
+  isGray,
+  backButtonLink,
+  leftContent,
+  displayName,
+  currentState,
+  row,
+  label,
+  icon: icon$1
+};
+const RecordHeader = ({
+  title: title2,
+  currentState: currentState2,
+  breadcrumb,
+  label: label2,
+  backButtonLink: backButtonLink2,
+  isTitleGray
+}) => {
+  return /* @__PURE__ */ jsxs("div", {
+    className: style$2.RecordHeader,
+    children: [backButtonLink2 && /* @__PURE__ */ jsx("a", {
+      href: backButtonLink2,
+      className: style$2.backButtonLink,
+      children: /* @__PURE__ */ jsx(FontAwesomeIcon, {
+        className: style$2.icon,
+        icon: faArrowLeft
+      })
+    }), /* @__PURE__ */ jsxs("div", {
+      className: style$2.leftContent,
+      children: [/* @__PURE__ */ jsxs("div", {
+        className: style$2.row,
+        children: [/* @__PURE__ */ jsx("h3", {
+          className: c(style$2.displayName, {
+            [style$2.isGray]: isTitleGray
+          }),
+          children: title2
+        }), label2 && /* @__PURE__ */ jsx("span", {
+          className: style$2.label,
+          children: label2
+        })]
+      }), (breadcrumb == null ? void 0 : breadcrumb.length) && /* @__PURE__ */ jsx(Breadcrumb, {
+        links: breadcrumb
+      })]
+    }), currentState2 && /* @__PURE__ */ jsx("div", {
+      className: style$2.currentState,
+      children: currentState2
+    })]
+  });
+};
 const convertToId = (someString) => {
   return (someString || "").toString().replace(/[^a-z0-9]/gim, "");
 };
@@ -727,17 +915,17 @@ const convertToCamelCaseId = (someString) => {
 };
 const InfoCard$1 = "InfoCard___2OPaP";
 const infoCard = "InfoCard___2OPaP";
-const icon$1 = "icon___U2spx";
+const icon = "icon___U2spx";
 const title = "title___9jkjA";
 const count = "count___tWK-D";
 const line = "line___WdF0p";
 const detailsLine = "detailsLine___2datd";
 const detailsLineTitle = "detailsLineTitle___JXsMx";
 const detailsLineValue = "detailsLineValue___RfGUh";
-const style$6 = {
+const style$1 = {
   InfoCard: InfoCard$1,
   infoCard,
-  icon: icon$1,
+  icon,
   title,
   count,
   line,
@@ -754,227 +942,50 @@ const InfoCard = ({
   isLoading
 }) => {
   var _a, _b, _c;
-  return /* @__PURE__ */ jsxs("article", {
-    id: `${id}InfoCard`,
-    className: style$6.infoCard,
-    role: "presentation",
-    onClick: onInfoCardClick,
-    children: [/* @__PURE__ */ jsx("div", {
-      children: /* @__PURE__ */ jsx("img", {
-        src: icon2,
-        className: style$6.icon,
-        alt
-      })
-    }), /* @__PURE__ */ jsx("div", {
-      className: c(style$6.count, {
-        skeleton: isLoading
-      }),
-      children: addCommasToNumber((_a = data == null ? void 0 : data.count) == null ? void 0 : _a.value)
-    }), /* @__PURE__ */ jsx("div", {
-      className: style$6.title,
-      children: /* @__PURE__ */ jsx("a", {
-        id: `${id}Link`,
-        onClick: onInfoCardClick,
-        children: (_b = data == null ? void 0 : data.count) == null ? void 0 : _b.title
-      })
-    }), /* @__PURE__ */ jsx("div", {
-      className: style$6.line
-    }), (_c = data == null ? void 0 : data.stats) == null ? void 0 : _c.map((instance) => {
-      return /* @__PURE__ */ jsxs("div", {
-        role: "presentation",
-        id: instance.id,
-        className: style$6.detailsLine,
-        onClick: instance.onClick,
-        children: [/* @__PURE__ */ jsx("div", {
-          className: style$6.detailsLineTitle,
-          children: instance.title
-        }), /* @__PURE__ */ jsx("div", {
-          className: c(style$6.detailsLineValue, {
-            skeleton: isLoading
-          }),
-          children: addCommasToNumber(instance.count)
-        })]
-      }, instance.id);
-    })]
-  });
-};
-const buttonGroup = "button-group___zQdnW";
-const style$5 = {
-  "button-group": "button-group___zQdnW",
-  buttonGroup
-};
-const ButtonGroup = ({
-  children
-}) => /* @__PURE__ */ jsx("div", {
-  className: style$5.buttonGroup,
-  children
-});
-const dropdown = "dropdown___PscgQ";
-const isIcon = "isIcon___RptAc";
-const menu = "menu___RcKEp";
-const list = "list___KTdJj";
-const item = "item___uCZSI";
-const style$4 = {
-  dropdown,
-  isIcon,
-  menu,
-  list,
-  item
-};
-const DropdownButton = ({
-  id,
-  label: label2,
-  options,
-  onOptionsSelect,
-  isIcon: isIcon2,
-  ...rest
-}) => {
-  return /* @__PURE__ */ jsx("div", {
-    className: c([style$4.dropdown, {
-      [style$4.isIcon]: isIcon2
-    }]),
-    children: /* @__PURE__ */ jsx(Menu, {
-      className: style$4.menu,
-      menuClassName: style$4.list,
-      menuButton: isIcon2 ? /* @__PURE__ */ jsx(IconButton$1, {
-        icon: faEllipsisVertical,
-        id: `${id}DropdownButton`,
-        type: "ghost",
-        ...rest
-      }) : /* @__PURE__ */ jsx(Button$1, {
-        id: `${id}DropdownButton`,
-        label: label2,
-        hasArrow: true,
-        ...rest
-      }),
-      children: options.map((item2) => /* @__PURE__ */ createElement(MenuItem, {
-        ...id && {
-          id: `${id}_${item2.key}`
-        },
-        className: style$4.item,
-        key: item2.key,
-        value: item2.key,
-        disabled: item2.disabled,
-        onClick: (e) => onOptionsSelect(e.syntheticEvent)
-      }, item2.value))
+  return /* @__PURE__ */ jsx(Card, {
+    children: /* @__PURE__ */ jsxs("div", {
+      id: `${id}InfoCard`,
+      className: style$1.infoCard,
+      role: "presentation",
+      onClick: onInfoCardClick,
+      children: [/* @__PURE__ */ jsx("div", {
+        children: /* @__PURE__ */ jsx("img", {
+          src: icon2,
+          className: style$1.icon,
+          alt
+        })
+      }), /* @__PURE__ */ jsx("div", {
+        className: c(style$1.count, {
+          skeleton: isLoading
+        }),
+        children: addCommasToNumber((_a = data == null ? void 0 : data.count) == null ? void 0 : _a.value)
+      }), /* @__PURE__ */ jsx("div", {
+        className: style$1.title,
+        children: /* @__PURE__ */ jsx("a", {
+          id: `${id}Link`,
+          onClick: onInfoCardClick,
+          children: (_b = data == null ? void 0 : data.count) == null ? void 0 : _b.title
+        })
+      }), /* @__PURE__ */ jsx("div", {
+        className: style$1.line
+      }), (_c = data == null ? void 0 : data.stats) == null ? void 0 : _c.map((instance) => {
+        return /* @__PURE__ */ jsxs("div", {
+          role: "presentation",
+          id: instance.id,
+          className: style$1.detailsLine,
+          onClick: instance.onClick,
+          children: [/* @__PURE__ */ jsx("div", {
+            className: style$1.detailsLineTitle,
+            children: instance.title
+          }), /* @__PURE__ */ jsx("div", {
+            className: c(style$1.detailsLineValue, {
+              skeleton: isLoading
+            }),
+            children: addCommasToNumber(instance.count)
+          })]
+        }, instance.id);
+      })]
     })
-  });
-};
-const NavBar$1 = "NavBar___vkkwh";
-const navBar = "NavBar___vkkwh";
-const breadcrumbContent = "breadcrumb-content___JnGq8";
-const logoContent = "Logo-content___uGsez";
-const leftContent$1 = "left-content___VwsNj";
-const style$3 = {
-  NavBar: NavBar$1,
-  navBar,
-  "breadcrumb-content": "breadcrumb-content___JnGq8",
-  breadcrumbContent,
-  "Logo-content": "Logo-content___uGsez",
-  logoContent,
-  "left-content": "left-content___VwsNj",
-  leftContent: leftContent$1
-};
-const NavBar = () => /* @__PURE__ */ jsxs("header", {
-  className: style$3.NavBar,
-  children: [/* @__PURE__ */ jsxs("div", {
-    className: style$3.leftContent,
-    children: [/* @__PURE__ */ jsx(Logo, {}), /* @__PURE__ */ jsx("div", {
-      className: style$3.breadcrumbContent,
-      children: "All Projects / PRJ-4 - Drug Substance Project"
-    })]
-  }), /* @__PURE__ */ jsx("div", {
-    className: style$3.rightContent,
-    children: "Rockets R US"
-  })]
-});
-const wrapper = "wrapper___GDopq";
-const wrapperHasMargin = "wrapper--hasMargin___Btpj-";
-const separator = "separator___01qMZ";
-const style$2 = {
-  wrapper,
-  "wrapper--hasMargin": "wrapper--hasMargin___Btpj-",
-  wrapperHasMargin,
-  separator
-};
-const Breadcrumb = ({
-  links,
-  hasSeparator
-}) => {
-  return /* @__PURE__ */ jsx(Fragment, {
-    children: links.map((item2, index) => /* @__PURE__ */ jsxs("div", {
-      className: c(style$2.wrapper, {
-        [style$2.wrapperHasMargin]: !hasSeparator
-      }),
-      children: [index !== 0 && hasSeparator && /* @__PURE__ */ jsx("span", {
-        className: style$2.separator,
-        children: " / "
-      }), /* @__PURE__ */ jsx(Link, {
-        href: item2.url,
-        label: item2.label
-      })]
-    }, item2.label + item2.url))
-  });
-};
-const RecordHeader$1 = "RecordHeader___WjOtW";
-const recordHeader = "RecordHeader___WjOtW";
-const isGray = "isGray___PR13C";
-const backButtonLink = "backButtonLink___YY41-";
-const leftContent = "leftContent___LpPqV";
-const displayName = "displayName___gY-Cx";
-const currentState = "currentState___--fM4";
-const row = "row___5C8g-";
-const label = "label___-dltC";
-const icon = "icon___e-vFL";
-const style$1 = {
-  RecordHeader: RecordHeader$1,
-  recordHeader,
-  isGray,
-  backButtonLink,
-  leftContent,
-  displayName,
-  currentState,
-  row,
-  label,
-  icon
-};
-const RecordHeader = ({
-  title: title2,
-  currentState: currentState2,
-  breadcrumb,
-  label: label2,
-  backButtonLink: backButtonLink2,
-  isTitleGray
-}) => {
-  return /* @__PURE__ */ jsxs("div", {
-    className: style$1.RecordHeader,
-    children: [backButtonLink2 && /* @__PURE__ */ jsx("a", {
-      href: backButtonLink2,
-      className: style$1.backButtonLink,
-      children: /* @__PURE__ */ jsx(FontAwesomeIcon, {
-        className: style$1.icon,
-        icon: faArrowLeft
-      })
-    }), /* @__PURE__ */ jsxs("div", {
-      className: style$1.leftContent,
-      children: [/* @__PURE__ */ jsxs("div", {
-        className: style$1.row,
-        children: [/* @__PURE__ */ jsx("h3", {
-          className: c(style$1.displayName, {
-            [style$1.isGray]: isTitleGray
-          }),
-          children: title2
-        }), label2 && /* @__PURE__ */ jsx("span", {
-          className: style$1.label,
-          children: label2
-        })]
-      }), (breadcrumb == null ? void 0 : breadcrumb.length) && /* @__PURE__ */ jsx(Breadcrumb, {
-        links: breadcrumb
-      })]
-    }), currentState2 && /* @__PURE__ */ jsx("div", {
-      className: style$1.currentState,
-      children: currentState2
-    })]
   });
 };
 const quickAccessCard = "quickAccessCard___-jS20";
@@ -995,38 +1006,42 @@ const QuickAccessCard = ({
     window.open(object.url, "_self");
   };
   const generateID = `${convertToCamelCaseId(object.title)}Link`;
-  return /* @__PURE__ */ jsxs("div", {
-    onClick: handleQuickAccessCardClick,
-    className: `${style.quickAccessCard} ${className || ""}`,
-    children: [/* @__PURE__ */ jsxs("div", {
-      children: [/* @__PURE__ */ jsx("div", {
-        className: c(style.quickAccessCardTitle, {
-          skeleton: isLoading
-        }),
-        children: addCommasToNumber(object.count)
+  return /* @__PURE__ */ jsx(Card, {
+    withHoverEffect: true,
+    children: /* @__PURE__ */ jsxs("div", {
+      className: `${style.quickAccessCard} ${className || ""}`,
+      onClick: handleQuickAccessCardClick,
+      children: [/* @__PURE__ */ jsxs("div", {
+        children: [/* @__PURE__ */ jsx("div", {
+          className: c(style.quickAccessCardTitle, {
+            skeleton: isLoading
+          }),
+          children: addCommasToNumber(object.count)
+        }), /* @__PURE__ */ jsx("div", {
+          className: style.quickAccessCardDetails,
+          children: /* @__PURE__ */ jsx("a", {
+            id: generateID,
+            onClick: handleQuickAccessCardClick,
+            href: object.url,
+            children: object.title
+          })
+        })]
       }), /* @__PURE__ */ jsx("div", {
-        className: style.quickAccessCardDetails,
-        children: /* @__PURE__ */ jsx("a", {
-          id: generateID,
-          onClick: handleQuickAccessCardClick,
-          href: object.url,
-          children: object.title
+        children: /* @__PURE__ */ jsx("img", {
+          src: object.icon.image,
+          width: object.icon.width,
+          height: object.icon.height,
+          alt: object.title
         })
       })]
-    }), /* @__PURE__ */ jsx("div", {
-      children: /* @__PURE__ */ jsx("img", {
-        src: object.icon.image,
-        width: object.icon.width,
-        height: object.icon.height,
-        alt: object.title
-      })
-    })]
+    })
   });
 };
 export {
   Breadcrumb,
   Button$1 as Button,
   ButtonGroup,
+  Card,
   DropdownButton,
   IconButton$1 as IconButton,
   InfoCard,
