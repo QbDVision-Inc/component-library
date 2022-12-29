@@ -943,6 +943,7 @@
   }) => {
     var _a, _b, _c;
     return /* @__PURE__ */ jsxRuntime.jsx(Card, {
+      withHoverEffect: true,
       children: /* @__PURE__ */ jsxRuntime.jsxs("div", {
         id: `${id}InfoCard`,
         className: style$1.infoCard,
@@ -1005,7 +1006,8 @@
       event.stopPropagation();
       window.open(object.url, "_self");
     };
-    const generateID = `${convertToCamelCaseId(object.title)}Link`;
+    const pluralizedTitle = object.title.at(-1) !== "s" ? `${object.title}s` : object.title;
+    const generateID = `${convertToCamelCaseId(pluralizedTitle)}Link`;
     return /* @__PURE__ */ jsxRuntime.jsx(Card, {
       withHoverEffect: true,
       children: /* @__PURE__ */ jsxRuntime.jsxs("div", {
@@ -1021,8 +1023,8 @@
             className: style.quickAccessCardDetails,
             children: /* @__PURE__ */ jsxRuntime.jsx("a", {
               id: generateID,
-              onClick: handleQuickAccessCardClick,
               href: object.url,
+              onClick: handleQuickAccessCardClick,
               children: object.title
             })
           })]
