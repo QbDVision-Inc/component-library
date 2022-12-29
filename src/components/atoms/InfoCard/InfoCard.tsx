@@ -27,7 +27,7 @@ const InfoCard: FC<InfoCardProps> = ({
   isLoading,
 }) => {
   return (
-    <Card>
+    <Card withHoverEffect>
       <div
         id={`${id}InfoCard`}
         className={style.infoCard}
