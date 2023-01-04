@@ -171,6 +171,7 @@
   background-color: #FFFFFF;
   box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 15%);
   transition: .3s;
+  overflow: hidden;
 }
 
   .card___Tv0v- * {
@@ -342,7 +343,6 @@
 .InfoCard___2OPaP{
   border-top: 4px solid #1FBCFF;
   height: 314px;
-  margin-top: 15px;
   min-width: 155px;
   font-family: "Open Sans", Arial, sans-serif;
 }
@@ -408,7 +408,6 @@
   flex-direction: row;
   height: 100px;
   justify-content: space-around;
-  margin-top: 15px;
   min-width: 250px;
 }
 
